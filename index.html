@@ -16,10 +16,7 @@
     margin: 0.00;
     padding: 0.00;
 	height: 100%;
-    background: url("background.png") no-repeat fixed center; 
     font-family: Verdanna;
-    height: 100%;
-	background-size: cover;
    }
    
    div.sticky {
@@ -33,6 +30,13 @@
 	line-height: 12%;
 	height: 82px;
    }
+   
+  .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+  }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
@@ -80,7 +84,10 @@
    /* Hide the images by default */
    .mySlides {
     display: none;
-	padding: 15px;
+	padding-top:10px; 
+	padding-bottom:10px;
+	background-image: url('BenLomond.png');
+	background-size: cover;
    }
 
    /* Add a pointer when hovering over the thumbnail images */
@@ -92,7 +99,7 @@
    .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 70%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -194,19 +201,22 @@
 <!-------------------------------------------------------- Body ------------------------------------------------------------------->
 
 <!----------------------------------------------------- Top Banner ---------------------------------------------------------------->
-
+ 
  <body>
+ 
+   <img src="Banner.png" style="width:30%;" class="center">
+ 
    <div class="sticky" id="myHeader"  style="color:white;">
     <center><h2>Home</h2></center>
 	<ul>
-     <li><a href="AboutMe.html">About Me</a></li>
      <li><a href="CV.html">CV</a></li>
+	 <li><a href="AboutMe.html">About Me</a></li>
     </ul>
    </div>
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
-    <div class="container" style="padding-top:5px"  margin: auto;>
+    <div class="container" margin: auto;>
      <center><div class="mySlides">
      <img src="Cairngorms.png" style="width:57%">
 	 </center>
