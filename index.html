@@ -231,7 +231,7 @@
    </div>
    
    <img src="Banner.png" style="width:30%;" class="center" id="banner">
-   <div class="header" id="myHeader" style="color:white;">
+   <div class="sticky" id="myHeader" style="color:white;">
     <center><h2>Home</h2></center>
 	<ul>
      <li><a href="CV.html">CV</a></li>
@@ -296,19 +296,6 @@
 <!-------------------------------------------------------- Script ----------------------------------------------------------------->
 
   <script>
-
-   window.onscroll = function() {myFunction()};
-
-   var header = document.getElementById("myHeader");
-   var sticky = header.offsetTop;
-
-   function myFunction() {
-    if (window.pageYOffset > sticky) {
-     header.classList.add("sticky");
-    } else {
-     header.classList.remove("sticky");
-    }
-   }
 
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
 
