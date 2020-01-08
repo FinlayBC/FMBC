@@ -45,10 +45,8 @@
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
-   .menu-container {
-    cursor: pointer;
-    z-index: 10000;
-    position:sticky;
+   .menu {
+    display: block;
    }
 
    .bar1, .bar2, .bar3 {
@@ -58,7 +56,6 @@
     margin: 6px 0;
     transition: 0.4s;
 	z-index: 10000;
-    position:sticky;
    }
 
    /* Rotate first bar */
@@ -219,6 +216,14 @@
   .sticky + .content {
    padding-top: 102px;
   }
+  
+  .navigation a {
+   display: block;
+   color: white;
+   text-align: left;
+   padding-left: 45px;
+   text-decoration: none;
+  }
 
  </style>
  </header>
@@ -228,12 +233,17 @@
  
  <body>
  
-    <div class="menu-container" onclick="myFunction(this)">
+    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick="myFunction(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
      <div class="bar3"></div>
     </div>
- 
+	
+	<div style= "padding-left: 20px; z-index: 10000; position: fixed;">
+     <p class= "navigation" style="font-size:22px;" id= "CV"><a href="CV.html">CV</a></p>
+     <p class= "navigation" style="font-size:22px;" id= "AboutME"><a href="AboutMe.html">About Me</a></p>
+    </div>
+	
    <img src="distort.png" style="width:100%;" class="center"> 
 	
    <div class="wrapper">
