@@ -45,34 +45,35 @@
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
-  ul {
-   list-style-type: none;
-   width: 70%;
-   margin: auto;
-   padding: 0;
-   overflow: hidden;
-   background-color: #333;
-   position: -webkit-sticky; /* Safari */
-   position: sticky;
-   top: 0;
-  }
+ .menucontainer {
+  display: inline-block;
+  cursor: pointer;
+}
 
-  li {
-   float: left;
-   list-style-type: none;
-  }
-  
-  li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-  }
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
-  li a:hover {
-   background-color: #111;
-  }
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
   
 
 <!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
@@ -226,6 +227,12 @@
  
    <img src="distort.png" style="width:100%;" class="center">
    
+   <div class="menucontainer" onclick="myFunction(this)">
+     <div class="bar1"></div>
+     <div class="bar2"></div>
+     <div class="bar3"></div>
+    </div> 
+	
    <div class="wrapper">
     <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView();">&#10094</a>
    </div>
@@ -295,6 +302,11 @@
 <!-------------------------------------------------------- Script ----------------------------------------------------------------->
 
   <script>
+
+   function myFunction(x) {
+    x.classList.toggle("change");
+   }
+} 
 
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
 
