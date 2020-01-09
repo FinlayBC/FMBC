@@ -93,6 +93,8 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
    }
+   
+
   
 
 <!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
@@ -235,14 +237,6 @@
   .sticky + .content {
    padding-top: 102px;
   }
-  
-  .navigation a {
-   display: block;
-   color: white;
-   text-align: left;
-   padding: 10px;
-   text-decoration: none;
-  }
 
  </style>
  </header>
@@ -252,7 +246,9 @@
  
  <body>
  
-    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:180px; background-color: #000000;" id="mySidebar">
+ 
+ 
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
      <br></br>
      <li><a href="cv.html", style="font-size:20px">CV</a></li>
      <li><a href="AboutMe.html", style="font-size:20px">About Me</a></li>
@@ -334,10 +330,10 @@
    function w3_open(x) {
     x.classList.toggle("change");
 	
-	if (document.getElementById("mySidebar").style.display == "none"){
-	 document.getElementById("mySidebar").style.display = "block";
-	} else {
+	if (document.getElementById("mySidebar").style.display == "block"){
 	 document.getElementById("mySidebar").style.display = "none";
+	} else {
+	 document.getElementById("mySidebar").style.display = "block";
 	}
 
    }
