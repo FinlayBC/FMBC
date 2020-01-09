@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
   <title>About Me</title>
@@ -63,6 +64,32 @@
   li a:hover {
    background-color: #111;
   }
+  
+   .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+	z-index: 100;
+   }
+
+   /* Rotate first bar */
+   .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+   }
+
+   /* Fade out the second bar */
+   .change .bar2 {
+    opacity: 0;
+   }
+
+   /* Rotate last bar */
+   .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+   }
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
@@ -112,13 +139,18 @@
 <!----------------------------------------------------- Top Banner ---------------------------------------------------------------->
 
  <body>
-   <div class="sticky" id="myHeader"  style="color:white;">
-    <center><h2>About Me</h2></center>
-	<ul>
-     <li><a href="index.html">Home</a></li>
-     <li><a href="CV.html">CV</a></li>
-    </ul>
-   </div>
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:180px; background-color: #000000;" id="mySidebar">
+     <br></br>
+     <li><a href="index.html", style="font-size:20px">Home</a></li>
+     <li><a href="CV.html", style="font-size:20px">CV</a></li>
+    </div>
+ 
+ 
+    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick="w3_open(this)">
+     <div class="bar1"></div>
+     <div class="bar2"></div>
+     <div class="bar3"></div>
+    </div>
    
    <br></br>
    <br></br>
@@ -160,6 +192,17 @@
 <!-------------------------------------------------------- Script ----------------------------------------------------------------->
 
   <script>
+  
+    function w3_open(x) {
+     x.classList.toggle("change");
+	
+	 if (document.getElementById("mySidebar").style.display == "block"){
+	  document.getElementById("mySidebar").style.display = "none";
+	 } else {
+	  document.getElementById("mySidebar").style.display = "block";
+	 }
+
+   }
 
   </script> 
  </body>

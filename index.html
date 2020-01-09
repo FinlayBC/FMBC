@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
    <title>Home</title>
@@ -18,6 +19,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: Verdanna;
+	background-color: #0d0d0d;
    }
    
    div.sticky {
@@ -45,6 +47,23 @@
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
+   li {
+    float: left;
+    list-style-type: none;
+   }
+  
+   li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+
+   li a:hover {
+    background-color: #111;
+   }
+   
    .menu {
     display: block;
    }
@@ -55,7 +74,7 @@
     background-color: #333;
     margin: 6px 0;
     transition: 0.4s;
-	z-index: 10000;
+	z-index: 100;
    }
 
    /* Rotate first bar */
@@ -105,7 +124,7 @@
    .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 170%;
+    top: 160%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -197,7 +216,7 @@
     color: #f1f1f1;
     text-align: center;
     opacity: 0.8;
-    background-color: #000;
+    background-color: #141414;
 	padding-top:10px;
 	padding-bottom:10px;
   }
@@ -221,7 +240,7 @@
    display: block;
    color: white;
    text-align: left;
-   padding-left: 45px;
+   padding: 10px;
    text-decoration: none;
   }
 
@@ -233,24 +252,26 @@
  
  <body>
  
-    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick="myFunction(this)">
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:180px; background-color: #000000;" id="mySidebar">
+     <br></br>
+     <li><a href="cv.html", style="font-size:20px">CV</a></li>
+     <li><a href="AboutMe.html", style="font-size:20px">About Me</a></li>
+    </div>
+ 
+ 
+    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick="w3_open(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
      <div class="bar3"></div>
     </div>
-	
-	<div style= "padding-left: 20px; z-index: 10000; position: fixed;">
-     <p class= "navigation" style="font-size:22px;" id= "CV"><a href="CV.html">CV</a></p>
-     <p class= "navigation" style="font-size:22px;" id= "AboutME"><a href="AboutMe.html">About Me</a></p>
-    </div>
-	
+		
    <img src="distort.png" style="width:100%;" class="center"> 
 	
    <div class="wrapper">
-    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView();">&#10094</a>
+    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView();">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    </div>
    
-   <img src="Banner.png" style="width:30%;" class="center" id="banner">
+   <img src="Banner.png" style="width:25%; opacity: 90%" class="center" id="banner">
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
@@ -310,8 +331,15 @@
 
   <script>
 
-   function myFunction(x) {
+   function w3_open(x) {
     x.classList.toggle("change");
+	
+	if (document.getElementById("mySidebar").style.display == "none"){
+	 document.getElementById("mySidebar").style.display = "block";
+	} else {
+	 document.getElementById("mySidebar").style.display = "none";
+	}
+
    }
 
 
