@@ -11,6 +11,7 @@
     margin: 0.00;
     padding: 0.00;
 	height: 100%;
+	scroll-behavior: auto;
 	scroll-behavior: smooth;
    }  
 
@@ -18,7 +19,7 @@
     margin: 0.00;
     padding: 0.00;
 	height: 100%;
-    font-family: Verdanna;
+    font-family: sans-serif;
 	background-color: #0d0d0d;
    }
    
@@ -64,10 +65,6 @@
     background-color: #111;
    }
    
-   .menu {
-    display: block;
-   }
-
    .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
@@ -194,6 +191,8 @@
    .demo:hover {
     opacity: 1;
    }
+ 
+ 
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
@@ -237,6 +236,14 @@
   .sticky + .content {
    padding-top: 102px;
   }
+  
+  #mySidebar {
+   position:fixed;
+   width:150px;
+   height:100%;
+   background-color:#000000;
+  display:none;
+  }
 
  </style>
  </header>
@@ -248,14 +255,16 @@
  
  
  
-    <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
+    <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
      <br></br>
-     <li><a href="cv.html", style="font-size:20px">CV</a></li>
+	 <ul>
+     <li><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
      <li><a href="AboutMe.html", style="font-size:20px">About Me</a></li>
+	 </ul>
     </div>
  
  
-    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
+    <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
      <div class="bar3"></div>
@@ -264,7 +273,7 @@
    <img src="distort.png" style="width:100%;" class="center"> 
 	
    <div class="wrapper">
-    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView();">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    </div>
    
    <img src="Banner.png" style="width:25%; opacity: 90%" class="center" id="banner">
@@ -330,10 +339,10 @@
    function w3_open(x) {
     x.classList.toggle("change");
 	
-	if (document.getElementById("mySidebar").style.display === "none"){
-	 document.getElementById("mySidebar").style.display = "block";
-	} else {
+	if (document.getElementById("mySidebar").style.display === "block"){
 	 document.getElementById("mySidebar").style.display = "none";
+	} else {
+	 document.getElementById("mySidebar").style.display = "block";
 	}
 
    }
@@ -369,6 +378,13 @@
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
    } 
+   
+   
+<!-------------------------------------------------- Smooth Scroll -------------------------------------------------------------->
+
+
+
+   
   </script> 
  </body>
 </html>
