@@ -255,7 +255,7 @@
     </div>
  
  
-    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick="w3_open(this)">
+    <div style="padding: 15px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
      <div class="bar3"></div>
@@ -330,10 +330,10 @@
    function w3_open(x) {
     x.classList.toggle("change");
 	
-	if (document.getElementById("mySidebar").style.display == "block"){
-	 document.getElementById("mySidebar").style.display = "none";
-	} else {
+	if (document.getElementById("mySidebar").style.display === "none"){
 	 document.getElementById("mySidebar").style.display = "block";
+	} else {
+	 document.getElementById("mySidebar").style.display = "none";
 	}
 
    }
