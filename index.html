@@ -2,6 +2,7 @@
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
    <title>Home</title>
@@ -11,7 +12,6 @@
     margin: 0.00;
     padding: 0.00;
 	height: 100%;
-	scroll-behavior: auto;
 	scroll-behavior: smooth;
    }  
 
@@ -20,7 +20,8 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color: #0d0d0d;
+	background-color:  #0e0112;
+    scroll-behavior: smooth;
    }
    
    div.sticky {
@@ -40,6 +41,7 @@
    margin-left: auto;
    margin-right: auto;
    width: 50%;
+   scroll-behavior: smooth;
   }
   
   .wrapper {
@@ -123,7 +125,7 @@
    .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 160%;
+    top: 152%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -148,11 +150,17 @@
     user-select: none;
     -webkit-user-select: none;
 	transform: rotate(270deg);
+	scroll-behavior: smooth;
+    -webkit-overflow-scrolling:touch;
+   }
+   
+   .prev {
+     left: 350px;
    }
 
    /* Position the "next button" to the right */
    .next {
-    right: 0;
+    right: 350px;
     border-radius: 3px 0 0 3px;
    }
 
@@ -242,9 +250,14 @@
    width:150px;
    height:100%;
    background-color:#000000;
-  display:none;
+   display:none;
+   z-index: 9998;
   }
-
+  
+  #smoothScroller {
+   scroll-behavior: smooth;
+  }
+  
  </style>
  </header>
 <!-------------------------------------------------------- Body ------------------------------------------------------------------->
@@ -273,14 +286,14 @@
    <img src="distort.png" style="width:100%;" class="center"> 
 	
    <div class="wrapper">
-    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    </div>
    
-   <img src="Banner.png" style="width:25%; opacity: 90%" class="center" id="banner">
+   <img src="Banner.png" style="width:19%; opacity: 90%; padding-bottom: 10px" class="center" id="banner">
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
-    <div class="container" margin: auto;>
+    <div class="container">
      <center><div class="mySlides">
      <img src="Cairngorms.png" style="width:57%">
 	 </center>
