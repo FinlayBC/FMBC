@@ -20,7 +20,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color:  #0e0112;
+	background-color:  #222;
     scroll-behavior: smooth;
    }
    
@@ -46,6 +46,7 @@
   
   .wrapper {
     text-align: center;
+	padding: 0px;
   }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
@@ -92,9 +93,6 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
    }
-   
-
-  
 
 <!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
 
@@ -105,6 +103,10 @@
    /* Position the image container (needed to position the left and right arrows) */
    .container {
     position: relative;
+	background-image: url('BenLomond.png');
+    background-repeat: no-repeat;
+	background-size: cover;
+	
    }
 
    /* Hide the images by default */
@@ -112,8 +114,6 @@
     display: none;
 	padding-top:10px; 
 	padding-bottom:10px;
-	background-image: url('BenLomond.png');
-	background-size: cover;
    }
 
    /* Add a pointer when hovering over the thumbnail images */
@@ -141,17 +141,16 @@
     cursor: pointer;
     position: absolute;
     align: center;
-    padding: 16px;
-    margin-top: -50px;
+	top:95%;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
 	transform: rotate(270deg);
 	scroll-behavior: smooth;
     -webkit-overflow-scrolling:touch;
+	padding: 0px;
    }
    
    .prev {
@@ -199,14 +198,12 @@
    .demo:hover {
     opacity: 1;
    }
- 
- 
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
   .top-container {
    background-color: #f1f1f1;
-   padding: 30px;
+   padding: 10px;
    text-align: center;
   }
 
@@ -266,8 +263,6 @@
  
  <body>
  
- 
- 
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
      <br></br>
 	 <ul>
@@ -276,20 +271,19 @@
 	 </ul>
     </div>
  
- 
     <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
      <div class="bar3"></div>
     </div>
 		
-   <img src="distort.png" style="width:100%;" class="center"> 
-	
-   <div class="wrapper">
-    <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   </div>
+    <img src="distort.png" style="width:100%;" class="center"> 
    
-   <img src="Banner.png" style="width:19%; opacity: 90%; padding-bottom: 10px" class="center" id="banner">
+    <div class="wrapper">
+     <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+	
+    <img src="Banner.png" style="width:19%; opacity: 90%; padding-bottom: 10px; padding-top: 0px" class="center" id="banner">
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
@@ -360,7 +354,6 @@
 
    }
 
-
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
 
    var slideIndex = 1;
@@ -391,12 +384,6 @@
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
    } 
-   
-   
-<!-------------------------------------------------- Smooth Scroll -------------------------------------------------------------->
-
-
-
    
   </script> 
  </body>
