@@ -20,22 +20,10 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color:  #222;
+	background-color:   #0c0a0a;
     scroll-behavior: smooth;
    }
-   
-   div.sticky {
-    position: -webkit-sticky;
-    position: fixed;
-    top: 0;
-    background-color: #000;
-	opacity: 0.8;
-    padding: 4px;
-    font-size: 19.5px;
-	line-height: 12%;
-	height: 82px;
-   }
-    
+       
   .center {
    display: block;
    margin-left: auto;
@@ -112,8 +100,8 @@
    /* Hide the images by default */
    .mySlides {
     display: none;
-	padding-top:10px; 
-	padding-bottom:10px;
+	padding-top:5px; 
+	padding-bottom:5px;
    }
 
    /* Add a pointer when hovering over the thumbnail images */
@@ -186,7 +174,7 @@
    /* Six columns side by side */
    .column {
     float: left;
-    width: 20.00%;
+    width: 16.66%;
    }
 
    /* Add a transparency effect for thumnbail images */
@@ -267,7 +255,7 @@
      <br></br>
 	 <ul>
      <li><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
-     <li><a href="AboutMe.html", style="font-size:20px">About Me</a></li>
+     <li><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
 	 </ul>
     </div>
  
@@ -283,15 +271,19 @@
      <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 	
-    <img src="Banner.png" style="width:19%; opacity: 90%; padding-bottom: 10px; padding-top: 0px" class="center" id="banner">
+    <img src="Banner.png" style="width:22%; opacity: 90%; padding-bottom: 10px; padding-top: 0px" class="center" id="banner">
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
     <div class="container">
-     <center><div class="mySlides">
+    <center><div class="mySlides">
      <img src="Cairngorms.png" style="width:57%">
 	 </center>
     </div>
+	
+	<center><div class="mySlides">
+     <img src="Renders.png" style="width:57%">
+    </div></center>
 
     <center><div class="mySlides">
      <img src="Sunset2.png" style="width:57%">
@@ -319,18 +311,21 @@
   <div class="row">
    <div class="column">
     <img class="demo cursor" src="Cairngorms.png" style="width:100%" onclick="currentSlide(1)" alt="Photography">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Sunset2.png" style="width:100%" onclick="currentSlide(2)" alt="Digital Art">
    </div>
    <div class="column">
-    <img class="demo cursor" src="VideoEditing.jpg" style="width:100%" onclick="currentSlide(3)" alt="Video Editing">
+    <img class="demo cursor" src="Renders.png" style="width:100%" onclick="currentSlide(2)" alt="3D Rendering">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Logo.png" style="width:100%" onclick="currentSlide(4)" alt="Logo Design">
+    <img class="demo cursor" src="Sunset2.png" style="width:100%" onclick="currentSlide(3)" alt="Digital Art">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="VideoEditing.jpg" style="width:100%" onclick="currentSlide(4)" alt="Video Editing">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="Logo.png" style="width:100%" onclick="currentSlide(5)" alt="Logo Design">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; background-color: black" onclick="currentSlide(5)" alt="Internal Marketing">
+    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; background-color: black" onclick="currentSlide(6)" alt="Internal Marketing">
    </div>
   </div>
  </div>
@@ -351,7 +346,6 @@
 	} else {
 	 document.getElementById("mySidebar").style.display = "block";
 	}
-
    }
 
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
