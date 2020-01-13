@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
   <title>About Me</title>
@@ -14,6 +14,12 @@
 	background-size: cover;
     background: url("Cairngorms2.png") no-repeat fixed center; 
     font-family: sans-serif;
+   }
+   
+   .wrapper {
+	padding: 0px;
+	padding-top: 11px;
+	display: inline-block
    }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
@@ -71,10 +77,7 @@
   
    .footer {
     position: bottom;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background: #555;
     color: #f1f1f1;
     text-align: center;
     opacity: 0.8;
@@ -108,8 +111,6 @@
 
  <body>
  
-    <br></br>
- 
     <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
      <div class="bar1"></div>
      <div class="bar2"></div>
@@ -124,7 +125,10 @@
 	 </ul>
     </div>
    
-   <div style="background:rgba(255, 255, 255,0.88); width:70%; margin:0 auto;">
+   <br></br>
+   
+   <div class="wrapper">
+   <div style="background:rgba(255, 255, 255,0.88); width:70%; position: relative; left: 325px;">
      <p style="color:white;background-color:#007ac0;font-size:26px; padding:8px; padding-left:12px">Personal</p>
 	 <img src="selfie.png"; alt="Me"; align= "right"; width= 30%; hspace="20";>
      <p style="font-size:18px;padding:12px; padding-left:18px;padding-right:18px;LINE-HEIGHT:25px;">
@@ -146,12 +150,13 @@
 	 
 	 <p style="font-size:18px;padding:12px; padding-left:18px;padding-right:18px;padding-bottom:40px;LINE-HEIGHT:25px;">If I was to be given the chance for a new start I would work tirelessly to obtain the necessary skills in order to 
 	 become a valuable employee within your business. </p>
-   </div>			
+   </div>	
+   </div>   
 
    <br></br>   
-   <br></br>   
+   <br></br> 
    
-   <div class="footer" style= "position: bottom">
+   <div class="footer">
      <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; www.linkedin.com/in/finlaycraig</p>
    </div>
 
