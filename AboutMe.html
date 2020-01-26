@@ -59,6 +59,7 @@
    .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
+	background-color: #ffffff;
    }
 
    /* Fade out the second bar */
@@ -70,6 +71,7 @@
    .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
+	background-color: #ffffff;
    }
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
@@ -212,11 +214,11 @@
 
      //time to animate our circles ladies and gentlemen.
      if (circles[i].x - circles[i].r + circles[i].vx < container.x || circles[i].x + circles[i].r + circles[i].vx > container.x + container.width) {
-      circles[i].vx = -circles[i].vx;
+      circles[i].vx = -circles[i].vx/2;
      }
 
      if (circles[i].y + circles[i].r + circles[i].vy > container.y + container.height || circles[i].y - circles[i].r + circles[i].vy < container.y) {
-      circles[i].vy = -circles[i].vy;
+      circles[i].vy = -circles[i].vy/2;
      }
 
      circles[i].x += circles[i].vx

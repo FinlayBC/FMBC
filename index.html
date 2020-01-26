@@ -20,7 +20,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color:   #0c0a0a;
+	background-color: #0c0a0a;
     scroll-behavior: smooth;
    }
        
@@ -69,6 +69,7 @@
    .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
+	background-color: #ffffff;
    }
 
    /* Fade out the second bar */
@@ -80,6 +81,7 @@
    .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
+	background-color: #ffffff;
    }
 
 <!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
@@ -111,7 +113,7 @@
    .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 152%;
+    top: 40%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -276,14 +278,14 @@
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
     <div class="container">
-    <center><div class="mySlides">
-     <img src="Cairngorms.png" style="width:57%">
-	 </center>
-    </div>
-	
+    	
 	<center><div class="mySlides">
      <img src="Fish.png" style="width:57%">
     </div></center>
+	
+	<center><div class="mySlides">
+     <img src="Cairngorms.png" style="width:57%">
+    </div> </center>
 
     <center><div class="mySlides">
      <img src="Sunset2.png" style="width:57%">
@@ -314,10 +316,10 @@
 
   <div class="row">
    <div class="column">
-    <img class="demo cursor" src="Cairngorms.png" style="width:100%" onclick="currentSlide(1)" alt="Photography">
+    <img class="demo cursor" src="Fish.png" style="width:100%" onclick="currentSlide(1)" alt="Graphic Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Fish.png" style="width:100%" onclick="currentSlide(2)" alt="Graphic Design">
+    <img class="demo cursor" src="Cairngorms.png" style="width:100%" onclick="currentSlide(2)" alt="Photography">
    </div>
    <div class="column">
     <img class="demo cursor" src="Sunset2.png" style="width:100%" onclick="currentSlide(3)" alt="Digital Art">

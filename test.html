@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<!------------------------------------------------------- Background ----------------------------------------------------------------->
+  <title>CV</title>
+  <style>
+    
+
+   html{
+    margin: 0.00;
+    padding: 0.00;
+	height: 100%;
+	scroll-behavior: smooth;
+   }  
+
+   body {
+    margin: 0.00;
+    padding: 0.00;
+	height: 100%;
+    font-family: cambria;
+	background-color:   #0c0a0a;
+   }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+#wrapper{
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  /*transition for the background color*/
+  -webkit-transition: background-color 500ms;
+   -moz-transition: background-color 700ms;
+   -o-transition: background-color 700ms;
+   transition: background-color 700ms;
+}
+
+/*color classes to be applied to "#wrapper" by the js*/
+.colorOne{
+  background-color: #BF3F3F;
+}
+.colorTwo{
+  background-color: #59A57F;
+}
+.colorThree{
+  background-color: black;
+}
+.colorFour{
+  background-color: #7FBF3F;
+}
+
+/*layout styles not really relevant to this demo*/
+
+header{
+  width: 100%;
+  color: white;
+  background-color: #191919;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  margin-bottom: 100px;
+}
+h2{
+  font-size: .7em;
+  padding-top: .5em;
+}
+
+.item{
+  width: 100%; 
+  max-width: 600px;
+  margin: 0 auto;
+  height: 650px;
+  padding: 0px 0 10px 0;
+}
+
+h1{
+  color: white;
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  font-size: 10em;
+  font-weight: 700;
+}
+p{
+  width: 64%;
+  display: inline-block;
+  color: white;
+  line-height: 170%;
+  font-size: .9em;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 550px) {
+  h1{
+    display: block;
+    width: 90%;
+    margin-left: 3%;
+  }
+  p{
+    display: block;
+    width: 90%;
+    margin-left: 3%;
+  }
+  header{
+    margin-bottom: 30px;
+  }
+  
+}
+  
+  
+ </style>
+ </header>
+<!-------------------------------------------------------- Body ------------------------------------------------------------------->
+
+ <body>
+	
+   <section id="wrapper" class="colorOne">
+  
+  <header>
+    Using Simple JS/jQuery and classes to get a cool transition effect on scroll.
+    <h2>(On phone view in debug mode)</h2>
+  </header>
+  
+  <article class="item">
+    <h1>01</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non varius nulla. Pellentesque sit amet sodales eros. Nam quis nibh vitae risus feugiat pulvinar vel eu est. Nam ex massa, rhoncus mattis est ac, iaculis vulputate nisl. Donec maximus nisi eu ipsum semper, eu euismod mi sodales. Nunc id felis sit amet sem faucibus placerat. Sed consectetur lectus metus, et ullamcorper nisi fermentum sit amet. Sed in volutpat magna, nec accumsan orci. Aenean turpis lectus, tincidunt nec diam et, condimentum scelerisque nisi. Aenean elementum neque eros, et interdum enim faucibus et. Cras eleifend interdum felis, non dignissim purus vulputate in. Suspendisse vel nunc dolor. Curabitur venenatis nisi non odio auctor, et malesuada odio tincidunt.</p>
+  </article>
+  
+  <article class="item">
+    <h1>02</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non varius nulla. Pellentesque sit amet sodales eros. Nam quis nibh vitae risus feugiat pulvinar vel eu est. Nam ex massa, rhoncus mattis est ac, iaculis vulputate nisl. Donec maximus nisi eu ipsum semper, eu euismod mi sodales. Nunc id felis sit amet sem faucibus placerat. Sed consectetur lectus metus, et ullamcorper nisi fermentum sit amet. Sed in volutpat magna, nec accumsan orci. Aenean turpis lectus, tincidunt nec diam et, condimentum scelerisque nisi. Aenean elementum neque eros, et interdum enim faucibus et. Cras eleifend interdum felis, non dignissim purus vulputate in. Suspendisse vel nunc dolor. Curabitur venenatis nisi non odio auctor, et malesuada odio tincidunt.</p>
+  </article>
+  
+  <article class="item">
+     <h1>03</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non varius nulla. Pellentesque sit amet sodales eros. Nam quis nibh vitae risus feugiat pulvinar vel eu est. Nam ex massa, rhoncus mattis est ac, iaculis vulputate nisl. Donec maximus nisi eu ipsum semper, eu euismod mi sodales. Nunc id felis sit amet sem faucibus placerat. Sed consectetur lectus metus, et ullamcorper nisi fermentum sit amet. Sed in volutpat magna, nec accumsan orci. Aenean turpis lectus, tincidunt nec diam et, condimentum scelerisque nisi. Aenean elementum neque eros, et interdum enim faucibus et. Cras eleifend interdum felis, non dignissim purus vulputate in. Suspendisse vel nunc dolor. Curabitur venenatis nisi non odio auctor, et malesuada odio tincidunt.</p>
+  </article>
+  
+  <article class="item">
+     <h1>04</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non varius nulla. Pellentesque sit amet sodales eros. Nam quis nibh vitae risus feugiat pulvinar vel eu est. Nam ex massa, rhoncus mattis est ac, iaculis vulputate nisl. Donec maximus nisi eu ipsum semper, eu euismod mi sodales. Nunc id felis sit amet sem faucibus placerat. Sed consectetur lectus metus, et ullamcorper nisi fermentum sit amet. Sed in volutpat magna, nec accumsan orci. Aenean turpis lectus, tincidunt nec diam et, condimentum scelerisque nisi. Aenean elementum neque eros, et interdum enim faucibus et. Cras eleifend interdum felis, non dignissim purus vulputate in. Suspendisse vel nunc dolor. Curabitur venenatis nisi non odio auctor, et malesuada odio tincidunt.</p>
+  </article>
+  
+</section>
+   
+<!-------------------------------------------------------- Script ----------------------------------------------------------------->
+
+  <script>
+  
+   function w3_open(x) {
+    x.classList.toggle("change");
+	
+	if (document.getElementById("mySidebar").style.display === "block"){
+	 document.getElementById("mySidebar").style.display = "none";
+	} else {
+	 document.getElementById("mySidebar").style.display = "block";
+	}
+   }
+   
+<!--------------------------------------------------------- Colour Change ------------------------------------------------------------------>
+   
+$(window).scroll(function() {
+  if ($(this).scrollTop() <= 250) {
+    $('#wrapper').addClass('colorOne')
+      .removeClass('colorTwo');
+  } else if ($(this).scrollTop() <= 400) {
+    $('#wrapper').addClass('colorTwo')
+      .removeClass('colorThree');
+  } else if ($(this).scrollTop() <= 600) {
+    $('#wrapper').addClass('colorThree')
+      .removeClass('colorFour');
+  } else if ($(this).scrollTop() <= 750) {
+    $('#wrapper').addClass('colorFour')
+      .removeClass('colorFive');
+  } else {
+    $('#wrapper').addClass('colorOne')
+  }
+});
+
+
+  
+  </script> 
+ </body>
+</html>
