@@ -53,6 +53,7 @@
   /* Style the tab content */
   .tabcontent {
    animation: fadeIn ease 0.8s;
+   animation: fadeOut ease 0.8s;
    float: left;
    padding: 0px 12px;
    width: 80%;
@@ -84,6 +85,14 @@
    }
   }
 
+  @keyframes fadeOut {
+   100% {
+    opacity:1;
+   }
+   0% {
+    opacity:0;
+   }
+  }
 
   /* Clear floats after the tab */
   .clearfix::after {
@@ -211,7 +220,7 @@
   }
 
   .dropdown-content {
-   display: none;
+   display: block;
    position: absolute;
    background-color: #f1f1f1;
    min-width: 160px;
