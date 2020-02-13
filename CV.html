@@ -251,6 +251,14 @@
    padding-right:18px;
    LINE-HEIGHT:25px;
   }
+  
+  .sideBarButton{
+   transition: transform .3s;
+  }
+  
+  .sideBarButton:hover {
+   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 
 </style>
 </head>
@@ -259,8 +267,8 @@
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
 	 <ul>
 	 <li style="padding-bottom: 40px"></li>
-     <li><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
-     <li><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
+     <li class="sideBarButton"><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
+     <li class="sideBarButton"><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
 	 </ul>
     </div>
  
@@ -352,7 +360,7 @@
     </div>
 	
 	<div class="footer" style= "position: fixed; bottom:0%;">
-     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; www.linkedin.com/in/finlaycraig</p>
+     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
     </div>
 
 <script>

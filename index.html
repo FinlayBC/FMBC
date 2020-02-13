@@ -34,7 +34,6 @@
   
   .wrapper {
     text-align: center;
-	padding: 0px;
   }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
@@ -113,7 +112,7 @@
    .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
+    top: 30%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -159,9 +158,11 @@
    /* Container for image text */
    .caption-container {
     text-align: center;
-    background-color: #222;
+    opacity: 0.8;
+    background-color: #141414;
     padding: 2px;
     color: white;
+	font-size: 17px;
    }
 
    .row:after {
@@ -174,7 +175,7 @@
    /* Six columns side by side */
    .column {
     float: left;
-    width: 14.28%;
+    width: 25.00%;
    }
 
    /* Add a transparency effect for thumnbail images */
@@ -243,6 +244,19 @@
    scroll-behavior: smooth;
   }
   
+  #wrapper {
+   width: 78%;
+   margin: 0 auto;
+  }
+  
+  .sideBarButton{
+    transition: transform .3s;
+  }
+  
+  .sideBarButton:hover {
+   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
  </style>
  </header>
 <!-------------------------------------------------------- Body ------------------------------------------------------------------->
@@ -254,8 +268,8 @@
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
      <br></br>
 	 <ul>
-     <li><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
-     <li><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
+     <li class="sideBarButton"><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
+     <li class="sideBarButton"><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
 	 </ul>
     </div>
  
@@ -264,47 +278,49 @@
      <div class="bar2"></div>
      <div class="bar3"></div>
     </div>
-	
-	
-		
+			
     <img src="distort.png" style="width:100%;" class="center"> 
    
     <div class="wrapper">
      <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 	
-    <img src="Banner.png" style="width:22%; opacity: 90%; padding-bottom: 10px; padding-top: 0px" class="center" id="banner">
+    <img src="Banner.png" style="width:16%; opacity: 90%; padding-top: 5px;" class="center" id="banner">
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
 
+   <div id="wrapper">
     <div class="container">
-    	
 	<center><div class="mySlides">
-     <img src="Fish.png" style="width:57%">
+     <img src="Fish.png" style="width:60%">
     </div></center>
 	
 	<center><div class="mySlides">
-     <img src="Cairngorms.png" style="width:57%">
+     <img src="Cairngorms.png" style="width:60%">
     </div> </center>
-
-    <center><div class="mySlides">
-     <img src="Sunset2.png" style="width:57%">
-    </div></center>
 	
     <center><div class="mySlides">
-     <img src="Renders.png" style="width:57%">
-    </div></center>
-
-    <center><div class="mySlides">
-     <img src="VideoEditing.png" style="width:57%">
+     <img src="InternalMarketing.png" style="width:60%">
     </div></center>
 	
 	<center><div class="mySlides">
-     <img src="Logo.png" style="width:57%">
+     <img src="Logo.png" style="width:60%">
+    </div></center>
+
+    <center><div class="mySlides">
+     <img src="Sunset2.png" style="width:60%">
     </div></center>
 	
-	<center><div class="mySlides">
-     <img src="InternalMarketing.png" style="width:57%">
+    <center><div class="mySlides">
+     <img src="Renders.png" style="width:60%">
+    </div></center>
+
+    <center><div class="mySlides">
+     <img src="VideoEditing.png" style="width:60%">
+    </div></center>
+	
+    <center><div class="mySlides">
+     <img src="UseYourWords.png" style="width:60%">
     </div></center>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094</a>
@@ -316,31 +332,35 @@
 
   <div class="row">
    <div class="column">
-    <img class="demo cursor" src="Fish.png" style="width:100%" onclick="currentSlide(1)" alt="Graphic Design">
+    <img class="demo cursor" src="Fish.png" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Graphic Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Cairngorms.png" style="width:100%" onclick="currentSlide(2)" alt="Photography">
+    <img class="demo cursor" src="Cairngorms.png" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Photography">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Sunset2.png" style="width:100%" onclick="currentSlide(3)" alt="Digital Art">
+    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Internal Marketing">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Renders.png" style="width:100%" onclick="currentSlide(4)" alt="3D Modelling">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="VideoEditing.jpg" style="width:100%" onclick="currentSlide(5)" alt="Video Editing">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Logo.png" style="width:100%" onclick="currentSlide(6)" alt="Logo Design">
+    <img class="demo cursor" src="Logo.png" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="Logo Design">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; background-color: black" onclick="currentSlide(7)" alt="Internal Marketing">
+    <img class="demo cursor" src="Sunset2.png" style="width:100%; padding: 10px;" onclick="currentSlide(5)" alt="Digital Art">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="Renders.png" style="width:100%; padding: 10px;" onclick="currentSlide(6)" alt="3D Modelling">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="VideoEditing.png" style="width:100%; padding: 10px;" onclick="currentSlide(7)" alt="Video Editing">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="UseYourWords.png" style="width:100%; padding: 10px;" onclick="currentSlide(8)" alt="'Use Your Words', Photo Edit, January 2020">
    </div>
   </div>
  </div>
+ </div>
  
    <div class="footer">
-     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; www.linkedin.com/in/finlaycraig</p>
+     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
    </div>
 
 <!-------------------------------------------------------- Script ----------------------------------------------------------------->
