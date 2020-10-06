@@ -20,7 +20,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color: #0c0a0a;
+	background-color: #111111;
     scroll-behavior: smooth;
    }
        
@@ -141,12 +141,13 @@
    }
    
    .prev {
-     left: 250px;
+     left: 150px;
+	 padding-top: -20px;
    }
 
    /* Position the "next button" to the right */
    .next {
-    right: 250px;
+    right: 150px;
     border-radius: 3px 0 0 3px;
    }
 
@@ -180,7 +181,7 @@
 
    /* Add a transparency effect for thumnbail images */
    .demo {
-    opacity: 0.8;
+    opacity: 0.5;
    }
 
    .active,
@@ -282,53 +283,57 @@
     <img src="distort.png" style="width:100%;" class="center"> 
    
     <div class="wrapper">
-     <a class="scrollbutton" onClick="document.getElementById('banner').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a class="scrollbutton" onClick="document.getElementById('scroll point').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
-	
-    <img src="Banner.png" style="width:16%; opacity: 90%; padding-top: 5px;" class="center" id="banner">
 
-<!------------------------------------------------------ Slideshow ----------------------------------------------------------------->
+<!------------------------------------------------------ Slideshow ----------------------------------------------------------------->		 
+
+<div id="scroll point"> <br></br> </div>
 
    <div id="wrapper">
     <div class="container">
 	<center><div class="mySlides">
-     <img src="Fish.png" style="width:60%">
+     <img src="Fish.png" style="width:80%">
     </div></center>
 	
 	<center><div class="mySlides">
-     <img src="Cairngorms.png" style="width:60%">
+     <img src="Cairngorms.png" style="width:80%">
     </div> </center>
 	
     <center><div class="mySlides">
-     <img src="InternalMarketing.png" style="width:60%">
+     <img src="InternalMarketing.png" style="width:80%">
     </div></center>
 	
 	<center><div class="mySlides">
-     <img src="YoutubeBanner.png" style="width:60%">
+     <img src="YoutubeBanner.png" style="width:80%">
     </div></center>
 
     <center><div class="mySlides">
-     <img src="Sunset2.png" style="width:60%">
+     <img src="Sunset2.png" style="width:80%">
     </div></center>
 	
     <center><div class="mySlides">
-     <img src="Renders.png" style="width:60%">
+     <img src="Renders.png" style="width:80%">
     </div></center>
 
     <center><div class="mySlides">
-     <img src="VideoEditing.png" style="width:60%">
+     <img src="VideoEditing.png" style="width:80%">
     </div></center>
 	
     <center><div class="mySlides">
-     <img src="UseYourWords.png" style="width:60%">
+     <img src="UseYourWords.png" style="width:80%">
     </div></center>
 	
     <center><div class="mySlides">
-     <img src="Bear.png" style="width:60%">
+     <img src="Bear.png" style="width:80%">
     </div></center>
 	
     <center><div class="mySlides">
-     <img src="Logo.png" style="width:60%">
+     <img src="Logo.png" style="width:80%">
+    </div></center>
+	
+	<center><div class="mySlides">
+     <img src="River.png" style="width:80%">
     </div></center>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094</a>
@@ -368,6 +373,9 @@
    </div>
    <div class="column">
     <img class="demo cursor" src="Logo.png" style="width:100%; padding: 10px;" onclick="currentSlide(10)" alt="Logo Design">
+   </div> 
+   <div class="column">
+    <img class="demo cursor" src="River.png" style="width:100%; padding: 10px;" onclick="currentSlide(11)" alt="High Contrast River Design">
    </div> 
   </div>
  </div>
