@@ -400,6 +400,18 @@
 	}
    }
 
+<!------------------------------------------------------ Jump on scroll ---------------------------------------------------------------->
+
+   window.onscroll = function() {scrollFunction()};
+
+   function scrollFunction() {
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop < 60) {
+     document.getElementById('scroll point').scrollIntoView();
+    } else {
+    }
+   }
+
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
 
    var slideIndex = 1;
