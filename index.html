@@ -107,55 +107,7 @@
    .cursor {
     cursor:pointer;
    }
-
-   /* Next & previous buttons */
-   .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 30%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-   }
-   
-   .scrollbutton {
-    cursor: pointer;
-    position: absolute;
-    align: center;
-	top:95%;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-	transform: rotate(270deg);
-	scroll-behavior: smooth;
-    -webkit-overflow-scrolling:touch;
-	padding: 0px;
-   }
-   
-   .prev {
-     left: 150px;
-	 padding-top: -20px;
-   }
-
-   /* Position the "next button" to the right */
-   .next {
-    right: 150px;
-    border-radius: 3px 0 0 3px;
-   }
-
-   /* On hover, add a black background color with a little bit see-through */
-   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-   }
-
+      
    /* Container for image text */
    .caption-container {
     text-align: center;
@@ -173,7 +125,7 @@
 	float: center;
    }
 
-   /* Six columns side by side */
+   /* Four columns side by side */
    .column {
     float: left;
     width: 25.00%;
@@ -182,6 +134,23 @@
    /* Add a transparency effect for thumnbail images */
    .demo {
     opacity: 0.5;
+   }
+   
+   .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+   }
+   
+   @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+   }
+
+   @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
    }
 
    .active,
@@ -281,10 +250,6 @@
     </div>
 			 
     <img src="distort.png" style="width:100%;" class="center"> 
-   
-    <div class="wrapper">
-     <a class="scrollbutton" onClick="document.getElementById('scroll point').scrollIntoView()" id="smoothScroller">&#10094</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
 
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->		 
 
@@ -292,72 +257,80 @@
 
    <div id="wrapper">
     <div class="container">
-	<center><div class="mySlides">
+	<center><div class="mySlides fade">
      <img src="Fish.jpg" style="width:80%">
     </div></center>
 	
-	<center><div class="mySlides">
+	<center><div class="mySlides fade">
      <img src="Cairngorms.jpg" style="width:80%">
     </div> </center>
 	
-    <center><div class="mySlides">
+    <center><div class="mySlides fade">
      <img src="InternalMarketing.png" style="width:80%">
     </div></center>
 	
-	<center><div class="mySlides">
+	<center><div class="mySlides fade">
      <img src="YoutubeBanner.png" style="width:80%">
     </div></center>
 	
-    <center><div class="mySlides">
+    <center><div class="mySlides fade">
      <img src="River.jpg" style="width:80%">
     </div></center>
 	
-    <center><div class="mySlides">
+	<center><div class="mySlides fade">
+     <img src="Easy Peeler.jpg" style="width:80%">
+    </div></center>
+	
+    <center><div class="mySlides fade">
      <img src="Renders.jpg" style="width:80%">
     </div></center>
 
-    <center><div class="mySlides">
+    <center><div class="mySlides fade">
      <img src="VideoEditing.png" style="width:80%">
     </div></center>
 	
-    <center><div class="mySlides">
+    <center><div class="mySlides fade">
      <img src="UseYourWords.png" style="width:80%">
     </div></center>
 	
-    <center><div class="mySlides">
-     <img src="Bear.jpg" style="width:80%">
+	<center><div class="mySlides fade">
+     <img src="Big Lez.png" style="width:80%">
     </div></center>
-	
-    <center><div class="mySlides">
+		
+    <center><div class="mySlides fade">
      <img src="Logo.jpg" style="width:80%">
     </div></center>
 	
-	<center><div class="mySlides">
+	<center><div class="mySlides fade">
      <img src="Sunset2.jpg" style="width:80%">
     </div></center>
+	
+	<center><div class="mySlides fade">
+     <img src="Bear.jpg" style="width:80%">
+    </div></center>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-    <a class="next" onclick="plusSlides(1)">&#10095</a>
-
     <div class="caption-container">
      <p id="caption"></p>
     </div>
 
   <div class="row">
    <div class="column">
-    <img class="demo cursor" src="Fish.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Graphic Design">
+    <img class="demo cursor" src="Fish.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(0)" alt="Graphic Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Photography">
+    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Photography">
    </div>
    <div class="column">
-    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Internal Marketing">
+    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Internal Marketing">
    </div>
    <div class="column">
-    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="Youtube Banner">
+    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Youtube Banner">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="River.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(5)" alt="High Contrast River Design">
+    <img class="demo cursor" src="River.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="High Contrast River Design">
+   </div> 
+   <div class="column">
+    <img class="demo cursor" src="Easy Peeler.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(5)" alt="Easy Peeler Band Logo">
    </div> 
    <div class="column">
     <img class="demo cursor" src="Renders.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(6)" alt="3D Modelling">
@@ -369,15 +342,18 @@
     <img class="demo cursor" src="UseYourWords.png" style="width:100%; padding: 10px;" onclick="currentSlide(8)" alt="'Use Your Words', Photo Edit, January 2020">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Bear.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(9)" alt="Teddy Bear Shirt Design">
+    <img class="demo cursor" src="Big Lez.png" style="width:100%; padding: 10px;" onclick="currentSlide(9)" alt="Big Lez Shirt Design">
    </div>
    <div class="column">
     <img class="demo cursor" src="Logo.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(10)" alt="Logo Design">
    </div> 
-
    <div class="column">
     <img class="demo cursor" src="Sunset2.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(11)" alt="Digital Art">
    </div>
+   <div class="column">
+    <img class="demo cursor" src="Bear.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(12)" alt="Teddy Bear Shirt Design">
+   </div>
+
   </div>
  </div>
  </div>
@@ -401,20 +377,24 @@
    }
 
 <!------------------------------------------------------ Jump on scroll ---------------------------------------------------------------->
-
+   
+   var hasScrolled = false;
+	 
    window.onscroll = function() {scrollFunction()};
 
    function scrollFunction() {
 
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop < 60) {
+    if ((document.body.scrollTop > 200 || document.documentElement.scrollTop < 210) && hasScrolled == false) {
      document.getElementById('scroll point').scrollIntoView();
+	 hasScrolled = true;
     } else {
     }
+	
    }
 
 <!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
-
-   var slideIndex = 1;
+   
+   var slideIndex = 0;
    showSlides(slideIndex);
 
    function plusSlides(n) {
@@ -422,25 +402,26 @@
    }
 
    function currentSlide(n) {
-    showSlides(slideIndex = n);
+    slideIndex = n;
    }
 
    function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("mySlides fade");
     var dots = document.getElementsByClassName("demo");
     var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
-     slides[i].style.display = "none";
+     slides[i].style.display = "none";  
     }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
     for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
    } 
    
   </script> 

@@ -40,7 +40,6 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
-    padding-top:20px;
 }
 
 /* Hide the images by default */
@@ -73,13 +72,13 @@ img {
 /* Position the "next button" to the right */
 .next {
   position: absolute;
-  right: 400px;
+  right: 200px;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
   position: absolute;
-  left: 400px;
+  left: 200px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -96,6 +95,14 @@ img {
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
 }
 
 .row:after {
@@ -135,23 +142,6 @@ img {
    vertical-align: middle;
    float: none;
 }
-
-   .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.0s;
-    animation-name: fade;
-    animation-duration: 1.0s;
-   }
-   
-   @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-   }
-
-   @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-   }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
@@ -208,19 +198,16 @@ img {
     color: #f1f1f1;
    }
   
-  .footer {
+   .footer {
     position: bottom;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background: #555;
     color: #f1f1f1;
     text-align: center;
     opacity: 0.8;
     background-color: #141414;
 	padding-top:10px;
 	padding-bottom:10px;
-  }
+   }
 
    .content {
     padding: 16px;
@@ -258,6 +245,9 @@ img {
  
  </style>
  </header>
+<!-------------------------------------------------------- Body ------------------------------------------------------------------->
+
+<!----------------------------------------------------- Top Banner ---------------------------------------------------------------->
 
  <body>
  
@@ -273,20 +263,20 @@ img {
      <br></br>
 	 <ul>
      <li class="sideBarButton"><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
-     <li class="sideBarButton"><a href="About.html", style="font-size:20px">About</a></li>
+     <li class="sideBarButton"><a href="CV.html", style="font-size:20px">CV</a></li>
 	 </ul>
     </div>
 	
- <div class="container">
-  <div class="mySlides fade">
+	<div class="container">
+  <div class="mySlides">
     <img src="CV 1.png"  class="center" style="width:35%">
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="CV 2.png"  class="center" style="width:35%">
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="CV 3.png"  class="center" style="width:35%;">
   </div>
   
@@ -304,9 +294,9 @@ img {
       <img class="demo cursor" src="CV 3.png" style="width:100%" onclick="currentSlide(3)">
     </div>
   </div>
-  </div>
-	
-	<div class="footer">
+</div>
+   
+	<div class="footer" style= "position: fixed; bottom:0%;">
      <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
     </div>
 
