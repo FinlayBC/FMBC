@@ -189,17 +189,6 @@
   .content {
    padding: 16px;
   }
-
-  .sticky {
-   position: fixed;
-   z-index: 9999;
-   top: 0;
-   width: 99.6%;
-  }
-
-  .sticky + .content {
-   padding-top: 102px;
-  }
   
   #mySidebar {
    position:fixed;
@@ -226,7 +215,7 @@
   .sideBarButton:hover {
    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
-  
+    
  </style>
  </header>
 <!-------------------------------------------------------- Body ------------------------------------------------------------------->
@@ -249,14 +238,20 @@
      <div class="bar3"></div>
     </div>
 			 
-    <img src="distort.png" style="width:100%;" class="center"> 
-
+    <img src="distort.jpg" style="width:100%;" class="center"> 
+	
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->		 
 
 <div id="scroll point"> <br></br> </div>
-
+    
+	
    <div id="wrapper">
     <div class="container">
+	
+    <center><div class="mySlides fade">
+     <img src="Sun Ring.jpg" style="width:80%">
+    </div></center>
+	
 	<center><div class="mySlides fade">
      <img src="Fish.jpg" style="width:80%">
     </div></center>
@@ -272,15 +267,11 @@
 	<center><div class="mySlides fade">
      <img src="YoutubeBanner.png" style="width:80%">
     </div></center>
-	
-    <center><div class="mySlides fade">
-     <img src="River.jpg" style="width:80%">
-    </div></center>
-	
+		
 	<center><div class="mySlides fade">
      <img src="Easy Peeler.jpg" style="width:80%">
     </div></center>
-	
+		
     <center><div class="mySlides fade">
      <img src="Renders.jpg" style="width:80%">
     </div></center>
@@ -289,22 +280,34 @@
      <img src="VideoEditing.png" style="width:80%">
     </div></center>
 	
+	<center><div class="mySlides fade">
+     <img src="Nebulae.jpg" style="width:80%">
+    </div></center>
+	
+	<center><div class="mySlides fade">
+     <img src="River.jpg" style="width:80%">
+    </div></center>
+	
     <center><div class="mySlides fade">
      <img src="UseYourWords.png" style="width:80%">
+    </div></center>
+	
+    <center><div class="mySlides fade">
+     <img src="Sunset2.jpg" style="width:80%">
+    </div></center>
+	
+    <center><div class="mySlides fade">
+     <img src="tattoo.jpg" style="width:80%">
+    </div></center>
+	
+	<center><div class="mySlides fade">
+     <img src="Vector.jpg" style="width:80%">
     </div></center>
 	
 	<center><div class="mySlides fade">
      <img src="Big Lez.png" style="width:80%">
     </div></center>
-		
-    <center><div class="mySlides fade">
-     <img src="Logo.jpg" style="width:80%">
-    </div></center>
-	
-	<center><div class="mySlides fade">
-     <img src="Sunset2.jpg" style="width:80%">
-    </div></center>
-	
+			
 	<center><div class="mySlides fade">
      <img src="Bear.jpg" style="width:80%">
     </div></center>
@@ -315,19 +318,19 @@
 
   <div class="row">
    <div class="column">
-    <img class="demo cursor" src="Fish.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(0)" alt="Graphic Design">
+    <img class="demo cursor" src="Sun Ring.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(0)" alt="Poster Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Photography">
+    <img class="demo cursor" src="Fish.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Graphic Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Internal Marketing">
+    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Photography">
    </div>
    <div class="column">
-    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Youtube Banner">
-   </div> 
+    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Digital Marketing">
+   </div>
    <div class="column">
-    <img class="demo cursor" src="River.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="High Contrast River Design">
+    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="Youtube Banner">
    </div> 
    <div class="column">
     <img class="demo cursor" src="Easy Peeler.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(5)" alt="Easy Peeler Band Logo">
@@ -339,21 +342,29 @@
     <img class="demo cursor" src="VideoEditing.png" style="width:100%; padding: 10px;" onclick="currentSlide(7)" alt="Video Editing">
    </div>
    <div class="column">
-    <img class="demo cursor" src="UseYourWords.png" style="width:100%; padding: 10px;" onclick="currentSlide(8)" alt="'Use Your Words', Photo Edit, January 2020">
+    <img class="demo cursor" src="Nebulae.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(8)" alt="Digital Art">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Big Lez.png" style="width:100%; padding: 10px;" onclick="currentSlide(9)" alt="Big Lez Shirt Design">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Logo.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(10)" alt="Logo Design">
+    <img class="demo cursor" src="River.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(9)" alt="High Contrast River Design">
    </div> 
+   <div class="column">
+    <img class="demo cursor" src="UseYourWords.png" style="width:100%; padding: 10px;" onclick="currentSlide(10)" alt="'Use Your Words', Photo Edit, January 2020">
+   </div>
    <div class="column">
     <img class="demo cursor" src="Sunset2.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(11)" alt="Digital Art">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Bear.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(12)" alt="Teddy Bear Shirt Design">
+    <img class="demo cursor" src="tattoo.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(12)" alt="Tattoo Design">
    </div>
-
+   <div class="column">
+    <img class="demo cursor" src="Vector.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(13)" alt="Vector Studios Logo Design">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="Big Lez.png" style="width:100%; padding: 10px;" onclick="currentSlide(14)" alt="Big Lez Shirt Design">
+   </div>
+   <div class="column">
+    <img class="demo cursor" src="Bear.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(15)" alt="Teddy Bear Shirt Design">
+   </div>
   </div>
  </div>
  </div>
