@@ -35,6 +35,13 @@
   .wrapper {
     text-align: center;
   }
+  
+  div.sticky {
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   background-color: #111111;
+  }
    
 <!------------------------------------------------------- Navigation ----------------------------------------------------------------->
    
@@ -128,34 +135,36 @@
    /* Four columns side by side */
    .column {
     float: left;
-    width: 25.00%;
+    width: 20.00%;
    }
 
    /* Add a transparency effect for thumnbail images */
    .demo {
     opacity: 0.5;
+	transition: transform .6s;
    }
    
    .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 2.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
    }
    
    @-webkit-keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .2} 
     to {opacity: 1}
    }
 
    @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .2} 
     to {opacity: 1}
    }
 
    .active,
    .demo:hover {
     opacity: 1;
+    transform: scale(1.1);
    }
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
@@ -248,122 +257,124 @@
    <div id="wrapper">
     <div class="container">
 	
+	<div class="sticky" style="z-index: 100">
     <center><div class="mySlides fade">
-     <img src="Sun Ring.jpg" style="width:80%">
+     <img src="Sun Ring.jpg" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="Fish.jpg" style="width:80%">
+     <img src="Fish.jpg" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="Cairngorms.jpg" style="width:80%">
+     <img src="Cairngorms.jpg" style="width:70%">
     </div> </center>
 	
     <center><div class="mySlides fade">
-     <img src="InternalMarketing.png" style="width:80%">
+     <img src="InternalMarketing.png" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="YoutubeBanner.png" style="width:80%">
+     <img src="YoutubeBanner.png" style="width:70%">
     </div></center>
 		
 	<center><div class="mySlides fade">
-     <img src="Easy Peeler.jpg" style="width:80%">
+     <img src="Easy Peeler.jpg" style="width:70%">
     </div></center>
 		
     <center><div class="mySlides fade">
-     <img src="Renders.jpg" style="width:80%">
+     <img src="Renders.jpg" style="width:70%">
     </div></center>
 
     <center><div class="mySlides fade">
-     <img src="VideoEditing.png" style="width:80%">
+     <img src="VideoEditing.png" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="Nebulae.jpg" style="width:80%">
+     <img src="Nebulae.jpg" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="River.jpg" style="width:80%">
+     <img src="River.jpg" style="width:70%">
     </div></center>
 	
     <center><div class="mySlides fade">
-     <img src="UseYourWords.png" style="width:80%">
+     <img src="UseYourWords.png" style="width:70%">
     </div></center>
 	
     <center><div class="mySlides fade">
-     <img src="Sunset2.jpg" style="width:80%">
+     <img src="Sunset2.jpg" style="width:70%">
     </div></center>
 	
     <center><div class="mySlides fade">
-     <img src="tattoo.jpg" style="width:80%">
+     <img src="tattoo.jpg" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="Vector.jpg" style="width:80%">
+     <img src="Vector.jpg" style="width:70%">
     </div></center>
 	
 	<center><div class="mySlides fade">
-     <img src="Big Lez.png" style="width:80%">
+     <img src="Big Lez.png" style="width:70%">
     </div></center>
 			
 	<center><div class="mySlides fade">
-     <img src="Bear.jpg" style="width:80%">
+     <img src="Bear.jpg" style="width:70%">
     </div></center>
     
     <div class="caption-container">
      <p id="caption"></p>
     </div>
+	</div>
 
   <div class="row">
    <div class="column">
-    <img class="demo cursor" src="Sun Ring.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(0)" alt="Poster Design">
+    <img class="demo cursor" src="Sun Ring.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(0)" alt="Poster Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Fish.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(1)" alt="Graphic Design">
+    <img class="demo cursor" src="Fish.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(1)" alt="Graphic Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(2)" alt="Photography">
+    <img class="demo cursor" src="Cairngorms.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(2)" alt="Photography">
    </div>
    <div class="column">
-    <img class="demo cursor" src="InternalMarketing.png" style="width:100%; padding: 10px;" onclick="currentSlide(3)" alt="Digital Marketing">
+    <img class="demo cursor" src="InternalMarketing.png" style="width:90%; padding: 10px;" onclick="currentSlide(3)" alt="Digital Marketing">
    </div>
    <div class="column">
-    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%; padding: 10px;" onclick="currentSlide(4)" alt="Youtube Banner">
+    <img class="demo cursor" src="YoutubeBanner.png" style="width:90%; padding: 10px;" onclick="currentSlide(4)" alt="Youtube Banner">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="Easy Peeler.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(5)" alt="Easy Peeler Band Logo">
+    <img class="demo cursor" src="Easy Peeler.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(5)" alt="Easy Peeler Band Logo">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="Renders.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(6)" alt="3D Modelling">
+    <img class="demo cursor" src="Renders.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(6)" alt="3D Modelling">
    </div>
    <div class="column">
-    <img class="demo cursor" src="VideoEditing.png" style="width:100%; padding: 10px;" onclick="currentSlide(7)" alt="Video Editing">
+    <img class="demo cursor" src="VideoEditing.png" style="width:90%; padding: 10px;" onclick="currentSlide(7)" alt="Video Editing">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Nebulae.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(8)" alt="Digital Art">
+    <img class="demo cursor" src="Nebulae.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(8)" alt="Digital Art">
    </div>
    <div class="column">
-    <img class="demo cursor" src="River.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(9)" alt="High Contrast River Design">
+    <img class="demo cursor" src="River.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(9)" alt="High Contrast River Design">
    </div> 
    <div class="column">
-    <img class="demo cursor" src="UseYourWords.png" style="width:100%; padding: 10px;" onclick="currentSlide(10)" alt="'Use Your Words', Photo Edit, January 2020">
+    <img class="demo cursor" src="UseYourWords.png" style="width:90%; padding: 10px;" onclick="currentSlide(10)" alt="'Use Your Words', Photo Edit, January 2020">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Sunset2.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(11)" alt="Digital Art">
+    <img class="demo cursor" src="Sunset2.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(11)" alt="Digital Art">
    </div>
    <div class="column">
-    <img class="demo cursor" src="tattoo.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(12)" alt="Tattoo Design">
+    <img class="demo cursor" src="tattoo.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(12)" alt="Tattoo Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Vector.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(13)" alt="Vector Studios Logo Design">
+    <img class="demo cursor" src="Vector.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(13)" alt="Vector Studios Logo Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Big Lez.png" style="width:100%; padding: 10px;" onclick="currentSlide(14)" alt="Big Lez Shirt Design">
+    <img class="demo cursor" src="Big Lez.png" style="width:90%; padding: 10px;" onclick="currentSlide(14)" alt="Big Lez Shirt Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Bear.jpg" style="width:100%; padding: 10px;" onclick="currentSlide(15)" alt="Teddy Bear Shirt Design">
+    <img class="demo cursor" src="Bear.jpg" style="width:90%; padding: 10px;" onclick="currentSlide(15)" alt="Teddy Bear Shirt Design">
    </div>
   </div>
  </div>
@@ -432,7 +443,7 @@
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
    } 
    
   </script> 
