@@ -91,28 +91,6 @@
     background-color: white;
    }
 
-<!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
-
-   * {box-sizing: border-box;}
-
-   img {vertical-align: middle;}
-
-   /* Position the image container (needed to position the left and right arrows) */
-   .container {
-    position: relative;
-    background-repeat: no-repeat;
-	background-size: cover;
-   }
-
-   /* Container for image text */
-   .caption-container {
-    text-align: center;
-    background-color: #141414;
-	padding-top:1px;
-	padding-bottom:1px;
-    color: white;
-	font-size: 17px;
-   }
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
@@ -162,93 +140,117 @@
    margin: 0 auto;
   }    
 	
-  body {
-   font-family: Arial;
-   margin: 0;
-  }
 
-  * {
-   box-sizing: border-box;
+<!-------------------------------------------------------- Hover Blocks ------------------------------------------------------------------->
+	
+  #rig {
+   max-width:900px;
+   margin:0 auto; /*center aligned*/
+   padding:0;
+   font-size:0; /* Remember to change it back to normal font size if have captions */
+   list-style:none;
+   background-color:#ffffff;
   }
-
-  img {
-   vertical-align: middle;
+  
+  #rig li {
+   display: inline-block;
+   *display:inline;/*for IE6 - IE7*/
+   width:25%;
+   vertical-align:middle;
+   box-sizing:border-box;
+   margin:0;
+   padding:0;
   }
-
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
+        
+  /* The wrapper for each item */
+  .rig-cell {
+   /*margin:12px;
+   box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+   display:block;
    position: relative;
+   overflow:hidden;
+  }
+        
+  /* If have the image layer */
+  .rig-img {
+   display:block;
+   width: 100%;
+   height: auto;
+   border:none;
+   transform:scale(1);
+   transition:all 1s;
   }
 
-  /* Hide the images by default */
-  .mySlides {
-   display: none;
-   padding-top: 30px;
+  #rig li:hover .rig-img {
+   transform:scale(1.05);
   }
-
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-   cursor: pointer;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-   cursor: pointer;
+        
+  /* If have the overlay layer */
+  .rig-overlay {
    position: absolute;
-   top: 20%;
-   width: auto;
-   padding: 16px;
-   margin-top: -50px;
-   color: white;
-   font-weight: bold;
-   font-size: 20px;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
-   -webkit-user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-   right: 0;
-   border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-   background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Number text (1/3 etc) */
-  .numbertext {
-   color: #bf805b;
-   font-size: 12px;
-   position: absolute;
+   display:block;
    top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   margin: auto;
+   background: #000000 no-repeat center 20%;
+   background-size:50px 50px;
+   opacity:0;
+   filter:alpha(opacity=0);/*For IE6 - IE8*/
+   transition:all 0.6s;
   }
 
-  .row:after {
-   content: "";
-   display: table;
-   clear: both;
+  #rig li:hover .rig-overlay {
+   opacity:0.8;
   }
 
-  /* Six columns side by side */
-  .column {
-   float: left;
-   width: 16.66%;
+  /* If have captions */
+  .rig-text {
+   display:block;
+   padding:0 30px;
+   box-sizing:border-box;
+   position:absolute;
+   left:0;
+   width:100%;
+   text-align:center;
+   text-transform:capitalize;
+   font-size:18px;
+   font-weight:bold;
+   font-family: 'Oswald', sans-serif;
+   font-weight:normal!important;
+   top:40%;
+   color:white;
+   opacity:0;
+   filter:alpha(opacity=0);/*For older IE*/
+   transform:translateY(-20px);
+   transition:all .3s;
   }
 
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-   opacity: 0.6;
+  #rig li:hover .rig-text {
+   transform:translateY(0px);
+   opacity:0.9;
   }
 
-  .active,
-  .demo:hover {
-   opacity: 1;
-  }	
+  @media (max-width: 9000px) {
+   #rig li {
+    width:24.00%;
+   }
+  }
+
+  @media (max-width: 550px) {
+   #rig li {
+    width:50%;
+   }
+  }
+  
+  div.headercontainer {
+   max-width: 50%;
+   margin: auto;
+   color: #ffffff;
+   text-align: center;
+  }
+	
 	
  </style>
  </header>
@@ -260,16 +262,16 @@
  
  <link rel="icon" href="FMBC2.png">
  
-    <div style="padding: 30px; z-index: 10000; position: fixed;">
-	 
-    </div>
+ 
  
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
      <br></br>
 	 <ul>
 	 <img src="FMBC.png" style="width:40%;" class="center">
      <li class="sideBarButton"><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
-     <li class="sideBarButton"><a href="AboutMe.html", style="font-size:20px; font-family: sans serif;">About Me</a></li>
+     <li class="sideBarButton"><a href="ROX.html", style="font-size:20px; font-family: sans serif;">ROX</a></li>
+	 <li class="sideBarButton"><a href="Freelance.html", style="font-size:20px; font-family: sans serif;">Freelance</a></li>
+     <li class="sideBarButton"><a href="Dingbro.html", style="font-size:20px; font-family: sans serif;">Dingbro</a></li>
 	 <br></br>
 	 </ul>
     </div>
@@ -280,409 +282,54 @@
      <div class="bar3"></div>
     </div>
 	
-<!------------------------------------------------------ Slideshow ----------------------------------------------------------------->		    
 	
-<div id="wrapper">
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Record.jpg" style="width:100%">
-  </div>
+<!----------------------------------------------------- Intro Text ---------------------------------------------------------------->
 
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="InternalMarketing.jpg" style="width:100%">
-  </div>
+<p><br></br></p>
 
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Map Ring 4.png" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Uni Flyer.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Page2.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Page4.jpg" style="width:100%">
-  </div>
-  
-    <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Fish.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Man Chat.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="UniwipeBanner.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Infographic.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="UniwipePostcard.jpg" style="width:100%">
-  </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Dingbro2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Dingbro3.png" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Stamps.jpg" style="width:100%">
-  </div>  
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="RandomRetros.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Hourglass.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Deen Divas Logo.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Wood.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="YoutubeBanner.png" style="width:100%">
-  </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Deen Divas Logo 2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Coke.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Bird.jpg" style="width:100%">
-  </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Vinyl Gloves.jpg" style="width:100%">
-  </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Planet Portal.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Vampire Blood.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="McFly.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Vector.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Cairngorms.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Renders.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="VideoEditing.jpg" style="width:100%">
-  </div>
-    	
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="tattoo.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Easy Peeler.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Arcade.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Sun Ring.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Lost At Sea.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Neon Rings.png" style="width:100%">
-  </div>
-  
-    <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Pixel Sunset.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Nebulae.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Clouds.png" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Sunset2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="River.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="UseYourWords.jpg" style="width:100%">
-  </div>  
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Big Lez.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Dogs.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Bear.jpg" style="width:100%">
-  </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Heart 2.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Kiss The Cook.jpg" style="width:100%">
+  <div class="headercontainer">
+   <h1 style="text-align: center;">Finlay Craig - Graphic Designer</h1>
+   <p style="text-align: center; margin: 0 auto; width: 40em;"><br></br>Welcome to my portfolio, please select a project below to see more, or click here to download my CV.</p>
   </div>
 	
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Mountain.jpg" style="width:100%">
-  </div>
-  
-  
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+	
+<!------------------------------------------------------ 1x4 Grid ----------------------------------------------------------------->		    
 
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="Record.jpg" style="width:100%" onclick="currentSlide(1)" alt="'Black Hole Sun', Vinyl Record T-Shirt Design">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="InternalMarketing.jpg" style="width:100%" onclick="currentSlide(2)" alt="Dingbro Internal Marketing">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Map Ring 4.png" style="width:100%" onclick="currentSlide(3)" alt="Diamond Offshore Drilling Rebrand Idea">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Uni Flyer.jpg" style="width:100%" onclick="currentSlide(4)" alt="Aberdeen University Pamphlet">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Page2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Dingbro Spring Magazine Pages 2 & 3">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="Page4.jpg" style="width:100%" onclick="currentSlide(6)" alt="Dingbro Spring Magazine Pages 4 & 5">
-    </div>
-	<div class="column">
-      <img class="demo cursor" src="Fish.jpg" style="width:100%" onclick="currentSlide(7)" alt="Contrast Fish Design">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Man Chat.jpg" style="width:100%" onclick="currentSlide(8)" alt="Man Chat - Logo Competition Entry">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="UniwipeBanner.jpg" style="width:100%" onclick="currentSlide(9)" alt="Uniwipe UltraGrime Banner">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Infographic.jpg" style="width:100%" onclick="currentSlide(10)" alt="Uniwipe 'The Benefits of Wipes' Infographic">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="UniwipePostcard.jpg" style="width:100%" onclick="currentSlide(11)" alt="Uniwipe Sample Postcard Flyer">
-    </div>   
-    <div class="column">
-      <img class="demo cursor" src="Dingbro2.jpg" style="width:100%" onclick="currentSlide(12)" alt="Dingbro Sales Flyers">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Dingbro3.png" style="width:100%" onclick="currentSlide(13)" alt="Dingbro Sales Flyers Cont.">
-    </div>	
-    <div class="column">
-      <img class="demo cursor" src="Stamps.jpg" style="width:100%" onclick="currentSlide(14)" alt="Stamp Designs">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="RandomRetros.png" style="width:100%" onclick="currentSlide(15)" alt="'Hourglass' Digital Art">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="Hourglass.jpg" style="width:100%" onclick="currentSlide(16)" alt="'Hourglass' Digital Art">
-    </div>
-	<div class="column">
-      <img class="demo cursor" src="Deen Divas Logo.jpg" style="width:100%" onclick="currentSlide(17)" alt="Deen Divas Commission 1">
-    </div>
-    <div class="column">
-    <img class="demo cursor" src="Wood.jpg" style="width:100%" onclick="currentSlide(18)" alt="Wood Group Logo Idea">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="YoutubeBanner.png" style="width:100%" onclick="currentSlide(19)" alt="Youtube Banner Commission">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Deen Divas Logo 2.jpg" style="width:100%" onclick="currentSlide(20)" alt="Deen Divas Commission 2">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Coke.jpg" style="width:100%" onclick="currentSlide(21)" alt="Coca Cola Advert Idea">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Bird.jpg" style="width:100%" onclick="currentSlide(22)" alt="Bird Shirt Design">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Vinyl Gloves.jpg" style="width:100%" onclick="currentSlide(23)" alt="'Vinyl Gloves Promotion">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Planet Portal.jpg" style="width:100%" onclick="currentSlide(24)" alt="Planet Portal Shirt Design">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Vampire Blood.jpg" style="width:100%" onclick="currentSlide(25)" alt="Vampire: The Masquerade Shirt Design">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="McFly.png" style="width:100%" onclick="currentSlide(26)" alt="McFly Promo Code Flyer">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Vector.jpg" style="width:100%" onclick="currentSlide(27)" alt="Vector Studios Logo Idea">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Cairngorms.jpg" style="width:100%" onclick="currentSlide(28)" alt="Photography">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Renders.jpg" style="width:100%" onclick="currentSlide(29)" alt="3D Renders">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="VideoEditing.jpg" style="width:100%" onclick="currentSlide(30)" alt="'Tarmac' Video Editing">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="tattoo.jpg" style="width:100%" onclick="currentSlide(31)" alt="Tattoo Design Commission">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Easy Peeler.jpg" style="width:100%" onclick="currentSlide(32)" alt="Band Logo Commission">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Arcade.jpg" style="width:100%" onclick="currentSlide(33)" alt="Arcade Sticker Commission">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Sun Ring.jpg" style="width:100%" onclick="currentSlide(34)" alt="'Echo Beach'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Lost At Sea.jpg" style="width:100%" onclick="currentSlide(35)" alt="'Lost At Sea'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Neon Rings.png" style="width:100%" onclick="currentSlide(36)" alt="Neon Map Of Europe">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Pixel Sunset.png" style="width:100%" onclick="currentSlide(37)" alt="'Pixel Sunset'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Nebulae.jpg" style="width:100%" onclick="currentSlide(38)" alt="'Nebulae' Photo Edit">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Clouds.png" style="width:100%" onclick="currentSlide(39)" alt="'Head In The Clouds'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Sunset2.jpg" style="width:100%" onclick="currentSlide(40)" alt="'River Sunset'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="River.jpg" style="width:100%" onclick="currentSlide(41)" alt="Phone Screensaver Idea">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="UseYourWords.jpg" style="width:100%" onclick="currentSlide(42)" alt="'Use Your Words'">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Big Lez.jpg" style="width:100%" onclick="currentSlide(43)" alt="'Big Lez' T-Shirt Design Commission">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Dogs.jpg" style="width:100%" onclick="currentSlide(44)" alt="Dog Repeat Pattern">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Bear.jpg" style="width:100%" onclick="currentSlide(45)" alt="'Tired Teddy Bear' T-Shirt Design">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Heart 2.jpg" style="width:100%" onclick="currentSlide(46)" alt="Pride Heart">
-   </div>
-   <div class="column">
-    <img class="demo cursor" src="Kiss The Cook.jpg" style="width:100%" onclick="currentSlide(47)" alt="Kiss The Cook - GTA Style Drawing">
-   </div> 
-   <div class="column">
-    <img class="demo cursor" src="Mountain.jpg" style="width:100%" onclick="currentSlide(48)" alt="'Cherry Blossom Sunset'">
-   </div>
-  </div>
+<div style="text-align:center">
+<ul id="rig">
+    <li>
+        <a class="rig-cell" href="CV.html" target="_blank">
+            <img class="rig-img" loading="lazy" src="CVIntro2.jpg" alt="CV" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text" style="font-size: 30px !important">CV</span>
+        </a>
+    </li>
+	<li>
+        <a class="rig-cell" href="ROX.html" target="_blank">
+            <img class="rig-img" loading="lazy" src="ROXIntro.jpg" alt="ROX" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text" style="font-size: 30px !important">ROX - Diamonds & Thrills</span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="Freelance.html" target="_blank">
+            <img class="rig-img" loading="lazy" src="Freelance3.jpg" alt="CV" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text" style="font-size: 30px !important">Freelance Design</span>
+        </a>
+    </li>
+	<li>
+        <a class="rig-cell" href="Dingbro.html" target="_blank">
+            <img class="rig-img" loading="lazy" src="DingbroIntro.jpg" alt="CV" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text" style="font-size: 30px !important">DINGBRO Ltd</span>
+        </a>
+    </li>
+</ul>
 </div>
-</div>
-	
+
    <div class="footer">
-     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
+     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig" target="_blank">www.linkedin.com/in/finlaycraig</a></p>
    </div>
 
 <!-------------------------------------------------------- Script ----------------------------------------------------------------->
@@ -699,36 +346,7 @@
 	}
    }
 
-<!------------------------------------------------------ Slideshow ---------------------------------------------------------------->
-   
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
   </script> 
  </body>
 </html>
