@@ -144,7 +144,7 @@
 <!-------------------------------------------------------- Hover Blocks ------------------------------------------------------------------->
 	
   #rig {
-   max-width:900px;
+
    margin:0 auto; /*center aligned*/
    padding:0;
    font-size:0; /* Remember to change it back to normal font size if have captions */
@@ -208,7 +208,7 @@
   /* If have captions */
   .rig-text {
    display:block;
-   padding:0 30px;
+
    box-sizing:border-box;
    position:absolute;
    left:0;
@@ -223,7 +223,7 @@
    color:white;
    opacity:0;
    filter:alpha(opacity=0);/*For older IE*/
-   transform:translateY(-20px);
+
    transition:all .3s;
   }
 
@@ -244,7 +244,7 @@
 
   @media (max-width: 550px) {
    #rig li {
-    width: 49%;
+    width: 50%;
    }
    .rig-text {
     font-size: 15px !important;
@@ -306,29 +306,29 @@
 <!------------------------------------------------------ 1x4 Grid ----------------------------------------------------------------->		    
 
 
-<ul id="rig" style="text-align: center !important; list-style-position: inside !important;">
-    <li>
+<ul id="rig" style= "display: inline-block; margin: auto; padding: 0; zoom:1; *display: inline; text-align:center;">
+    <li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="CV.html" target="_blank">
             <img class="rig-img" loading="lazy" src="CV2Update.jpg" alt="CV" />
             <span class="rig-overlay"></span>
             <span class="rig-text">CV</span>
         </a>
     </li>
-	<li>
+	<li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="ROX.html" target="_blank">
             <img class="rig-img" loading="lazy" src="ROXIntro.jpg" alt="ROX" />
             <span class="rig-overlay"></span>
             <span class="rig-text">ROX - Diamonds & Thrills</span>
         </a>
     </li>
-    <li>
+    <li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="Freelance.html" target="_blank">
             <img class="rig-img" loading="lazy" src="Freelance3.jpg" alt="CV" />
             <span class="rig-overlay"></span>
             <span class="rig-text">Freelance Design</span>
         </a>
     </li>
-	<li>
+	<li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="Dingbro.html" target="_blank">
             <img class="rig-img" loading="lazy" src="DingbroIntro.jpg" alt="CV" />
             <span class="rig-overlay"></span>
@@ -336,6 +336,7 @@
         </a>
     </li>
 </ul>
+
 
 
    <div class="footer">
