@@ -256,6 +256,33 @@
   .demo:hover {
    opacity: 1;
   }	
+  
+  
+  
+  
+  @media (min-width: 550px) {
+    .mobileview {
+        display: none;
+    }
+    .headerintrotext{
+     font-size: 40px;
+    }
+    div.headercontainer {
+     max-width: 50% !important;
+    }
+   }
+
+   @media (max-width: 550px) {
+    .desktopview {
+        display: none;
+    }
+	div.headercontainer {
+     max-width: 80% !important;
+    }
+	.headerintrotext{
+     font-size: 20px;
+    }
+   }
 	
  </style>
  </header>
@@ -294,7 +321,7 @@
 	<p><br></br></p>
 
 <div class="headercontainer">
-<h1 style="text-align: center;">Freelance Design Work</h1>
+<h1 style="text-align: center;" class="headerintrotext">Freelance Design Work</h1>
 <p style="text-align: justify; margin: 0 auto;"><br></br>Creating and designing on projects for clients, adapting to suit their needs and briefs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.</p>
 </div>
 	
