@@ -104,7 +104,7 @@
   }
   
   .footer {
-    position: absolute;
+    position: bottom;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -236,30 +236,48 @@
    opacity:0.9;
   }
 
-  @media (max-width: 9000px) {
+   @media screen and (min-width: 600px) {
+    .mobileview {
+     display: none;
+    }
+	.headercontainermob{
+	 display: none;
+	}
+	.headerintrotext{
+     font-size: 40px;
+    }
    #rig li {
-    width:24.00%;
+    width:24%;
 	font-size: 30px !important;
-   }
-   .headerintrotext{
-    font-size: 40px;
    }
   }
 
-  @media (max-width: 550px) {
+   @media screen and (max-width: 600px) {
+    .desktopview {
+     display: none;
+    }
+	.headercontainer{
+	 display: none;
+	}
+
    #rig li {
     width: 48%;
    }
    .rig-text {
     font-size: 15px !important;
    }
-   .headerintrotext{
-    font-size: 20px;
-   }
+
   }
   
   div.headercontainer {
    max-width: 47%;
+   margin: auto;
+   color: #ffffff;
+   text-align: center;
+  }
+  
+    div.headercontainermob {
+   max-width: 90%;
    margin: auto;
    color: #ffffff;
    text-align: center;
@@ -294,14 +312,21 @@
 	
 	
 <!----------------------------------------------------- Intro Text ---------------------------------------------------------------->
-  
-  <div class="headercontainer">
-  <br></br>
+
+<div class="headercontainer">
+ <br></br>
   <img src="FMBC.jpg" style="width:8%" loading="lazy">
-  <h1 style="text-align: center; color:#000000;">Finlay Craig - Communications and Engagement</h1>
+  <h1 style="text-align: center; color:#000000; font-size:20px;">Finlay Craig - Communications and Engagement</h1>
   <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Welcome to my portfolio, please select a project below to see more, or click <a href="FinlayCraigCVWebsite.pdf" target="_blank" download="FinlayCraigCV">here</a> to download my CV.<br></br></p>
 </div>
 
+
+<div class="headercontainermob">
+ <br></br>
+  <img src="FMBC.jpg" style="width:15%" loading="lazy">
+  <h1 style="text-align: center; color:#000000; font-size:22px;">Finlay Craig - Communications and Engagement</h1>
+  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Welcome to my portfolio, please select a project below to see more, or click <a href="FinlayCraigCVWebsite.pdf" target="_blank" download="FinlayCraigCV">here</a> to download my CV.<br></br></p>
+</div>
 	
 	
 <!------------------------------------------------------ 1x4 Grid ----------------------------------------------------------------->		    
