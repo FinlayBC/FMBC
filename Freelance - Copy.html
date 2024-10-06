@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Freelance</title>
+		
+		
+<style>
+
+  .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   scroll-behavior: smooth;
+  }
+
+<!------------------------------------------------------- Navigation ----------------------------------------------------------------->
+
+   li {
+    float: left;
+    list-style-type: none;
+	color: black;
+   }
+  
+   li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+   }
+
+   li a:hover {
+    background-color: #03203e;
+   }
+   
+   .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+	z-index: 100;
+   }
+
+   /* Rotate first bar */
+   .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+    background-color: white;
+   }
+
+   /* Fade out the second bar */
+   .change .bar2 {
+    opacity: 0;
+   }
+
+   /* Rotate last bar */
+   .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+    background-color: white;
+   }
+
+  #mySidebar {
+   position:fixed;
+   width:150px;
+   height:100%;
+   background-color:#ffffff;
+   color-:#000000;
+   display:none;
+   z-index: 9999;
+   filter: drop-shadow(5px 5px 10px #919191);;
+  }
+  
+  .sideBarButton{
+    transition: transform .3s;
+  }
+  
+  .sideBarButton:hover {
+   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
+  #smoothScroller {
+   scroll-behavior: smooth;
+  }
+
+
+<!------------------------------------------------------ Gallery ----------------------------------------------------------------->
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    gap: 6px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img.four-grid-cells {
+    grid-row: span 2 / auto;
+    grid-column: span 2 / auto;
+}
+
+img.wide-image {
+    grid-column: span 2 / auto;
+}
+
+</style>
+		
+    </head>
+
+<!------------------------------------------------------ Menu ----------------------------------------------------------------->
+ 
+ <link rel="icon" href="https://finlaybc.github.io/FMBC/FMBC2.png">
+ 
+    <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
+
+	 <ul style="list-style-type: none;">
+	 <img src="FMBC.jpg" style="width:40%;" class="center" >
+     <li class="sideBarButton"><a href="ROX.html", style="font-size:20px; font-family: sans serif;">ROX</a></li>
+     <li class="sideBarButton"><a href="YourVoiceInverclyde.html", style="font-size:20px; font-family: sans serif;">Your Voice</a></li>
+	 <li class="sideBarButton"><a href="Freelance.html", style="font-size:20px; font-family: sans serif;">Freelance</a></li>
+     <li class="sideBarButton"><a href="Dingbro.html", style="font-size:20px; font-family: sans serif;">Dingbro</a></li>
+	 <br></br>
+	 </ul>
+    </div>
+ 
+    <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
+     <div class="bar1"></div>
+     <div class="bar2"></div>
+     <div class="bar3"></div>
+    </div>
+	
+<!------------------------------------------------------ Text ----------------------------------------------------------------->
+	
+	<p><br></br></p>
+
+<div class="headercontainer">
+<h1 style="text-align: center;" class="headerintrotext">Freelance Design Work</h1>
+<p style="text-align: justify; margin: 0 auto;"><br></br>Creating and designing on projects for clients, adapting to suit their needs and briefs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.</p>
+</div>
+
+
+<!------------------------------------------------------ Gallery ----------------------------------------------------------------->
+    <body>
+        <div class="gallery">
+
+            <img class="four-grid-cells"
+                src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg"
+                alt="Northern Winter Sky Image" />
+
+            <img
+                src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg"
+                alt="Shining Stars Image" />
+
+            <img class="wide-image"
+                src="https://images.pexels.com/photos/3933881/pexels-photo-3933881.jpeg"
+                alt="A River Flowing Image" />
+
+            <img
+                src="https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg"
+                alt="A cloudy Mountain Image" />
+
+            <img
+                src="https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg"
+                alt="A Winter Rainbow Image" />
+
+            <img class="wide-image"
+                src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg"
+                alt="A Clean Mountain Lake" />
+
+            <img
+                src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg"
+                alt="Shining Stars Image" />
+
+        </div>
+		
+		
+		
+		
+		
+		
+		
+<script>
+   function w3_open(x) {
+    x.classList.toggle("change");
+	
+	if (document.getElementById("mySidebar").style.display === "block"){
+	 document.getElementById("mySidebar").style.display = "none";
+	} else {
+	 document.getElementById("mySidebar").style.display = "block";
+	}
+   }
+</script>
+    </body>
+
+</html>

@@ -6,6 +6,7 @@
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
    <title>Home</title>
+   <link rel="icon" type="image/x-icon" href="FMBC2.png">
   <style>
 	  
    html{
@@ -20,7 +21,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color: #111111;
+	background-color: #ffffff;
     scroll-behavior: smooth;
    }
        
@@ -48,25 +49,28 @@
    li {
     float: left;
     list-style-type: none;
-	color: white;
+	color: black;
+	
    }
   
    li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	list-style-type: none
    }
 
    li a:hover {
-    background-color: #03203e;
+    background-color: #000000;
+	color: white;
    }
    
    .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: white;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
 	z-index: 100;
@@ -76,7 +80,7 @@
    .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
-    background-color: white;
+    background-color: #000000;
    }
 
    /* Fade out the second bar */
@@ -88,28 +92,26 @@
    .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
-    background-color: white;
+    background-color: #000000;
    }
-
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
   .header {
-   padding: 0px 0px;
+   padding: 0px;
    background: #555;
    color: #f1f1f1;
   }
   
   .footer {
-    position: bottom;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #555;
-    color: #f1f1f1;
+    color: #000000;
     text-align: center;
     opacity: 0.8;
-    background-color: #141414;
+    background-color: #ffffff;
 	padding-top:10px;
 	padding-bottom:10px;
   }
@@ -118,9 +120,11 @@
    position:fixed;
    width:150px;
    height:100%;
-   background-color:#000000;
+   background-color:#ffffff;
+   color-:#000000;
    display:none;
-   z-index: 9998;
+   z-index: 9999;
+   filter: drop-shadow(5px 5px 10px #919191);;
   }
   
   .sideBarButton{
@@ -269,17 +273,13 @@
 <!----------------------------------------------------- Top Banner ---------------------------------------------------------------->
  
  <body>
- 
- <link rel="icon" href="https://finlaybc.github.io/FMBC/FMBC2.png">
- 
- 
- 
+  
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
-     <br></br>
-	 <ul>
-	 <img src="FMBC.png" style="width:40%;" class="center">
-     <li class="sideBarButton"><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
+
+	 <ul style="list-style-type: none;">
+	 <img src="FMBC.jpg" style="width:40%;" class="center">
      <li class="sideBarButton"><a href="ROX.html", style="font-size:20px; font-family: sans serif;">ROX</a></li>
+     <li class="sideBarButton"><a href="YourVoiceInverclyde.html", style="font-size:20px; font-family: sans serif;">Your Voice</a></li>
 	 <li class="sideBarButton"><a href="Freelance.html", style="font-size:20px; font-family: sans serif;">Freelance</a></li>
      <li class="sideBarButton"><a href="Dingbro.html", style="font-size:20px; font-family: sans serif;">Dingbro</a></li>
 	 <br></br>
@@ -294,31 +294,32 @@
 	
 	
 <!----------------------------------------------------- Intro Text ---------------------------------------------------------------->
-
-<p><br></br></p>
-
+  
   <div class="headercontainer">
-   <h1 class="headerintrotext" style="text-align: center;">Finlay Craig - Graphic Designer</h1>
-   <p style="text-align: center; margin: 0 auto;">Welcome to my portfolio, please select a project below to see more, or click <a href="FinlayCraigCVWebsite.pdf" target="_blank" download="FinlayCraigCV">here</a> to download my CV.<br></br></p>
-  </div>
+  <br></br>
+  <img src="FMBC.jpg" style="width:8%" loading="lazy">
+  <h1 style="text-align: center; color:#000000;">Finlay Craig - Communications and Engagement</h1>
+  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Welcome to my portfolio, please select a project below to see more, or click <a href="FinlayCraigCVWebsite.pdf" target="_blank" download="FinlayCraigCV">here</a> to download my CV.<br></br></p>
+</div>
+
 	
 	
 <!------------------------------------------------------ 1x4 Grid ----------------------------------------------------------------->		    
 
 
 <ul id="rig" style= "display: inline-block; margin: auto; padding: 0; zoom:1; *display: inline; text-align:center;">
-    <li style="float: center; padding: 2px 5px;">
-        <a class="rig-cell" href="CV.html" target="_blank">
-            <img class="rig-img" loading="lazy" src="ReworkedCV2Websitesmall.jpg" alt="CV" />
-            <span class="rig-overlay"></span>
-            <span class="rig-text">CV</span>
-        </a>
-    </li>
 	<li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="ROX.html" target="_blank">
             <img class="rig-img" loading="lazy" src="ROXIntroSmall.jpg" alt="ROX" />
             <span class="rig-overlay"></span>
             <span class="rig-text">ROX - Diamonds & Thrills</span>
+        </a>
+    </li>
+	<li style="float: center; padding: 2px 5px;">
+        <a class="rig-cell" href="YourVoiceInverclyde.html" target="_blank">
+            <img class="rig-img" loading="lazy" src="YourVoiceThumbnail1.jpeg" alt="ROX" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">Your Voice Inverclyde</span>
         </a>
     </li>
     <li style="float: center; padding: 2px 5px;">
@@ -330,14 +331,14 @@
     </li>
 	<li style="float: center; padding: 2px 5px;">
         <a class="rig-cell" href="Dingbro.html" target="_blank">
-            <img class="rig-img" loading="lazy" src="DingbroIntrosmall.jpg" alt="CV" />
+            <img class="rig-img" loading="lazy" src="Agri Back.jpg" alt="CV" />
             <span class="rig-overlay"></span>
             <span class="rig-text">DINGBRO Ltd</span>
         </a>
     </li>
 </ul>
 
-
+<br></br>
 
    <div class="footer">
      <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig" target="_blank">www.linkedin.com/in/finlaycraig</a></p>

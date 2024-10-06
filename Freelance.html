@@ -6,6 +6,7 @@
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
    <title>Freelance</title>
+   <link rel="icon" type="image/x-icon" href="FMBC2.png">
   <style>
 	  
    html{
@@ -20,7 +21,7 @@
     padding: 0.00;
 	height: 100%;
     font-family: sans-serif;
-	background-color: #111111;
+	background-color: #ffffff;
     scroll-behavior: smooth;
    }
        
@@ -48,25 +49,26 @@
    li {
     float: left;
     list-style-type: none;
-	color: white;
+	color: black;
    }
   
    li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
    }
 
    li a:hover {
-    background-color: #03203e;
+    background-color: #000000;
+	color: white;
    }
    
    .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: white;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
 	z-index: 100;
@@ -76,7 +78,7 @@
    .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
-    background-color: white;
+    background-color: black;
    }
 
    /* Fade out the second bar */
@@ -88,7 +90,7 @@
    .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
-    background-color: white;
+    background-color: black;
    }
 
 <!------------------------------------------------------- Slideshow ------------------------------------------------------------------>
@@ -147,7 +149,7 @@
    position:fixed;
    width:150px;
    height:100%;
-   background-color:#000000;
+   background-color:#ffffff;
    display:none;
    z-index: 9998;
   }
@@ -203,7 +205,7 @@
   .next {
    cursor: pointer;
    position: absolute;
-   top: 20%;
+   top: 25%;
    width: auto;
    padding: 16px;
    margin-top: -50px;
@@ -249,7 +251,7 @@
 
   /* Add a transparency effect for thumnbail images */
   .demo {
-   opacity: 0.6;
+   opacity: 0.9;
   }
 
   .active,
@@ -286,19 +288,13 @@
  
  <body>
  
- <link rel="icon" href="https://finlaybc.github.io/FMBC/FMBC2.png">
- 
-    <div style="padding: 30px; z-index: 10000; position: fixed;">
-	 
-    </div>
- 
     <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
      <br></br>
-	 <ul>
-	 <img src="FMBC.png" style="width:40%;" class="center">
+	 <ul style="list-style-type: none;">
+	 <img src="FMBC.jpg" style="width:40%;" class="center">
 	 <li class="sideBarButton"><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
      <li class="sideBarButton"><a href="ROX.html", style="font-size:20px; font-family: sans serif;">ROX</a></li>
-	 <li class="sideBarButton"><a href="CV.html", style="font-size:20px; font-family: sans serif;">CV</a></li>
+	 <li class="sideBarButton"><a href="YourVoiceInverclyde.html", style="font-size:20px; font-family: sans serif;">Your Voice</a></li>
      <li class="sideBarButton"><a href="Dingbro.html", style="font-size:20px; font-family: sans serif;">Dingbro</a></li>
 	 <br></br>
 	 </ul>
@@ -312,13 +308,12 @@
 	
 <!------------------------------------------------------ Intro ----------------------------------------------------------------->
 	
-	<p><br></br></p>
-
-<div class="headercontainer">
-<h1 style="text-align: center;" class="headerintrotext">Freelance Design Work</h1>
-<p style="text-align: justify; margin: 0 auto;"><br></br>Creating and designing on projects for clients, adapting to suit their needs and briefs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.</p>
+  <div class="headercontainer">
+  <br></br>
+  <img src="FMBC.jpg" style="width:8%" loading="lazy">
+  <h1 style="text-align: center; color:#000000;">Freelance Design Work</h1>
+  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Working with clients to realise their ideas, adapting to suit their needs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.<br></br></p>
 </div>
-	
 	
 	
 <!------------------------------------------------------ Slideshow ----------------------------------------------------------------->		    
@@ -372,7 +367,7 @@
     
   <div class="mySlides">
     <div class="numbertext"></div>
-    <img src="Stamps.jpg" loading="lazy" style="width:100%">
+    <img src="CleaningCoven.jpeg" loading="lazy" style="width:100%">
   </div>  
 
   <div class="mySlides">
@@ -524,15 +519,15 @@
     <div class="numbertext"></div>
     <img src="Bear.jpg" loading="lazy" style="width:100%">
   </div>
-  
-  <div class="mySlides">
-    <div class="numbertext"></div>
-    <img src="Heart 2.jpg" loading="lazy" style="width:100%">
-  </div>
     	
   <div class="mySlides">
     <div class="numbertext"></div>
     <img src="Mountain.jpg" loading="lazy" style="width:100%">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="Stamps.jpg" loading="lazy" style="width:100%">
   </div>
   
   
@@ -572,7 +567,7 @@
       <img class="demo cursor" src="UniwipePostcard.jpg" loading="lazy" style="width:100%" onclick="currentSlide(9)" alt="Uniwipe Sample Postcard Flyer">
     </div>   
     <div class="column">
-      <img class="demo cursor" src="Stamps.jpg" loading="lazy" style="width:100%" onclick="currentSlide(10)" alt="Stamp Designs">
+      <img class="demo cursor" src="CleaningCoven.jpeg" loading="lazy" style="width:100%" onclick="currentSlide(10)" alt="Stamp Designs">
     </div>
     <div class="column">
       <img class="demo cursor" src="RandomRetros.jpg" loading="lazy" style="width:100%" onclick="currentSlide(11)" alt="Random Retros Logo">
@@ -665,10 +660,10 @@
     <img class="demo cursor" src="Bear.jpg" loading="lazy" style="width:100%" onclick="currentSlide(40)" alt="'Tired Teddy Bear' T-Shirt Design">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Heart 2.jpg" loading="lazy" style="width:100%" onclick="currentSlide(41)" alt="Pride Heart">
+    <img class="demo cursor" src="Mountain.jpg" loading="lazy" style="width:100%" onclick="currentSlide(41)" alt="'Cherry Blossom Sunset'">
    </div>
    <div class="column">
-    <img class="demo cursor" src="Mountain.jpg" loading="lazy" style="width:100%" onclick="currentSlide(42)" alt="'Cherry Blossom Sunset'">
+    <img class="demo cursor" src="Stamps.jpg" loading="lazy" style="width:100%" onclick="currentSlide(42)" alt="'Cherry Blossom Sunset'">
    </div>
   </div>
 </div>
