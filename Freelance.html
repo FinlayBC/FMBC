@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
  
 <head>
 <!------------------------------------------------------- Background ----------------------------------------------------------------->
@@ -116,12 +118,18 @@
 	font-size: 17px;
    }
    
-  div.headercontainer {
-   max-width: 50%;
-   margin: auto;
-   color: #ffffff;
-   text-align: center;
-  }
+   div.headercontainer {
+    background-color: #FFFFFF;
+    max-width: 60%;
+    margin: auto;
+    color: #000000;
+    text-align: center;
+	border-radius: 25px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+    padding-top: 40px;
+   }
 
 <!------------------------------------------------------- Header ------------------------------------------------------------------>
 
@@ -136,11 +144,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #555;
-    color: #f1f1f1;
+    color: #000000;
     text-align: center;
     opacity: 0.8;
-    background-color: #141414;
+    background-color: #ffffff;
 	padding-top:10px;
 	padding-bottom:10px;
   }
@@ -152,6 +159,7 @@
    background-color:#ffffff;
    display:none;
    z-index: 9998;
+   filter: drop-shadow(5px 5px 10px #919191);
   }
   
   .sideBarButton{
@@ -269,6 +277,12 @@
     div.headercontainer {
      max-width: 50% !important;
     }
+	.headercontainermob{
+	 display: none;
+	}
+	.headerintrotext{
+     font-size: 40px;
+    }
    }
 
    @media (max-width: 550px) {
@@ -278,7 +292,25 @@
 	#wrapper {
      width: 90%;
     }   
+	.headercontainer{
+	 display: none;
+	}
+	.headerintrotext{
+     font-size: 20px;
+    }
    }
+   
+   div.headercontainermob {
+    max-width: 90%;
+    margin: auto;
+    color: #002C45;
+    text-align: center;
+	border-radius: 25px;
+   }
+   
+   
+   
+   
 	
  </style>
  </header>
@@ -308,11 +340,17 @@
 	
 <!------------------------------------------------------ Intro ----------------------------------------------------------------->
 	
-  <div class="headercontainer">
-  <br></br>
+<div class="headercontainer">
   <img src="FMBC.jpg" style="width:8%" loading="lazy">
-  <h1 style="text-align: center; color:#000000;">Freelance Design Work</h1>
-  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Working with clients to realise their ideas, adapting to suit their needs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.<br></br></p>
+  <h1 class="headerintrotext" style="text-align: center; color:#000000;">Freelance Design Work</h1>
+  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Working with clients to realise their ideas, adapting to suit their needs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.</p>
+</div>
+
+<div class="headercontainermob">
+  <br></br>
+  <img src="FMBC.jpg" style="width:15%" loading="lazy">
+  <h1 class="headerintrotext" style="text-align: center; color:#000000;">Freelance Design Work</h1>
+  <p style="text-align: justify; margin: 0 auto; color:#000000; padding-top:20;">Working with clients to realise their ideas, adapting to suit their needs. This work was very engaging and rewarding as I had to really use my imagination and try new approaches with each project.</p>
 </div>
 	
 	
