@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Marketing</title>
+<link href="FMBC2.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav"><a href="index.html">Home</a><a href="Optimal.html">Optimal</a><a href="ROX.html">ROX</a><a href="YourVoiceInverclyde.html">Your Voice</a><a href="Freelance.html">Freelance</a><a href="Dingbro.html">Dingbro</a><a href="CV.html">CV</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero compact"><div><p class="eyebrow">Marketing design archive</p><h1>Marketing</h1><p class="lede">An archive page for earlier product promotions and campaign materials.</p></div></section>
+<section class="section"><div class="gallery">
+<figure class="gallery-item contain"><img alt="Dingbro Diary Endsheet Design - Spring 2021" loading="lazy" src="Diary.jpg"/><figcaption class="small">Dingbro Diary Endsheet Design - Spring 2021</figcaption></figure><figure class="gallery-item contain"><img alt="Agriculture and Commercial Vehicle Magazine - Spring 2021" loading="lazy" src="Agri Front.jpg"/><figcaption class="small">Agriculture and Commercial Vehicle Magazine - Spring 2021</figcaption></figure><figure class="gallery-item contain"><img alt="Agriculture and Commercial Vehicle Magazine pages" loading="lazy" src="Page2.jpg"/><figcaption class="small">Agriculture and Commercial Vehicle Magazine pages</figcaption></figure><figure class="gallery-item contain"><img alt="Agriculture and Commercial Vehicle Magazine pages" loading="lazy" src="Page4.jpg"/><figcaption class="small">Agriculture and Commercial Vehicle Magazine pages</figcaption></figure><figure class="gallery-item contain"><img alt="Enviro Glove Promotion - Spring 2021" loading="lazy" src="Vinyl Gloves Green.jpg"/><figcaption class="small">Enviro Glove Promotion - Spring 2021</figcaption></figure><figure class="gallery-item contain"><img alt="Mirka Sander Promotion - January 2021" loading="lazy" src="Mirka.jpg"/><figcaption class="small">Mirka Sander Promotion - January 2021</figcaption></figure><figure class="gallery-item contain"><img alt="Battery Myths Flyer - January 2021" loading="lazy" src="Yuasa.jpg"/><figcaption class="small">Battery Myths Flyer - January 2021</figcaption></figure><figure class="gallery-item contain"><img alt="Various Promotions - 2020" loading="lazy" src="InternalMarketing.jpg"/><figcaption class="small">Various Promotions - 2020</figcaption></figure><figure class="gallery-item contain"><img alt="Drivetec Maintenance Range - Spring 2020" loading="lazy" src="Drivetec.jpg"/><figcaption class="small">Drivetec Maintenance Range - Spring 2020</figcaption></figure><figure class="gallery-item contain"><img alt="Donaldson Filter Offer Sheet - Winter 2019" loading="lazy" src="Donaldson.jpg"/><figcaption class="small">Donaldson Filter Offer Sheet - Winter 2019</figcaption></figure></div></section></main>
+<footer class="site-footer">
+<div class="footer-wrap">
+<strong>Finlay Craig</strong>
+<span><a href="mailto:finlaycraig96@googlemail.com">finlaycraig96@googlemail.com</a></span>
+<span>07898111358</span>
+<span><a href="https://www.linkedin.com/in/finlaycraig" rel="noopener noreferrer" target="_blank">LinkedIn</a></span>
+</div>
+</footer>
+
+
+<div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+</div><script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+  const expandableImages = document.querySelectorAll('.gallery img, .case-card > img, .cv-frame img, .about-panel img');
+
+  function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Expanded portfolio image';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (lightboxClose) lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
+
+  expandableImages.forEach((image) => {
+    image.classList.add('expandable-image');
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', 'Open image larger');
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script></body>
+</html>

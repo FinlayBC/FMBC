@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Optimal - Marketing, Digital and Automation Work</title>
+<link href="FMBC2.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav"><a href="index.html">Home</a><a aria-current="page" href="Optimal.html">Optimal</a><a href="ROX.html">ROX</a><a href="YourVoiceInverclyde.html">Your Voice</a><a href="Freelance.html">Freelance</a><a href="Dingbro.html">Dingbro</a><a href="CV.html">CV</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero compact">
+<div>
+<p class="eyebrow">Asset management marketing and digital delivery</p>
+<h1>Optimal</h1>
+<p class="lede">A focused selection of work across marketing, website development, project support, automation and video editing, all created to help communicate Optimal's services more clearly and improve delivery behind the scenes.</p>
+</div>
+</section>
+<section class="section">
+<div class="case-grid">
+<article class="card case-card">
+<img alt="Marketing work for Optimal" loading="lazy" src="Marketing.png"/>
+<h3>Marketing</h3>
+<p>Created campaign visuals, social media assets, event and webinar graphics, infographics and branded promotional content for Optimal. The work supported service campaigns such as software as an asset, GARPI and reliability-focused messaging, combining day-to-day marketing needs with polished external-facing collateral.</p>
+</article>
+<article class="card case-card">
+<img alt="Website development work for Optimal" loading="lazy" src="Website Development.png"/>
+<h3>Website Development</h3>
+<p>Designed and updated website content for Optimal, shaping page layouts, editing live content and improving how services, sectors and case studies were presented online. This included homepage sections, service pages and other web content aimed at giving the brand a clearer and more professional digital presence.</p>
+</article>
+<article class="card case-card">
+<img alt="Project management and presentations work for Optimal" loading="lazy" src="Project Management and Presentations.png"/>
+<h3>Project Management and Presentations</h3>
+<p>Produced presentation decks, workshop materials, project visuals and reporting content used to explain ideas, support client conversations and track delivery progress. This included planning graphics, S-curves, programme visuals and slide design that turned complex information into something clear and easy to present.</p>
+</article>
+<article class="card case-card">
+<img alt="Coding and AI automation work for Optimal" loading="lazy" src="Coding and AI Automation.png"/>
+<h3>Coding and AI Automation</h3>
+<p>Supported internal development and process improvement work through hands-on coding, HTML and CSS editing, automation workflows and AI-assisted tools. This covered practical delivery improvements such as workflow design, repository work, meeting-minutes automation and other solutions that reduced manual effort and sped up repeat tasks.</p>
+</article>
+<article class="card case-card">
+<img alt="Video editing work for Optimal" loading="lazy" src="Video Editing.png"/>
+<h3>Video Editing</h3>
+<p>Edited branded video content for explainers, campaigns and digital communication, bringing together timeline editing, graphics, screen content and finishing touches such as colour work and sequencing. The work supported both promotional output and more informative content around Optimal's services and methods.</p>
+</article>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-wrap">
+<strong>Finlay Craig</strong>
+<span><a href="mailto:finlaycraig96@googlemail.com">finlaycraig96@googlemail.com</a></span>
+<span>07898111358</span>
+<span><a href="https://www.linkedin.com/in/finlaycraig" rel="noopener noreferrer" target="_blank">LinkedIn</a></span>
+</div>
+</footer>
+<div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+</div><script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+  const expandableImages = document.querySelectorAll('.gallery img, .case-card > img, .cv-frame img, .about-panel img');
+
+  function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Expanded portfolio image';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (lightboxClose) lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
+
+  expandableImages.forEach((image) => {
+    image.classList.add('expandable-image');
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', 'Open image larger');
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script></body>
+</html>
