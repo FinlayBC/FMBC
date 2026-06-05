@@ -10,116 +10,32 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="css/styles.css" rel="stylesheet"/>
-
-<style>
-/* Homepage-only layout refinements */
-.home-page .home-hero {
-  padding: 2rem 1.25rem .75rem;
-}
-
-.home-page .home-hero h1 {
-  margin-bottom: 0;
-}
-
-.home-page #projects {
-  padding-top: .75rem;
-}
-
-.home-page .home-project-header {
-  margin-bottom: 1rem;
-}
-
-.home-page .home-project-header p:not(.eyebrow) {
-  display: none;
-}
-
-.home-page .project-grid {
-  max-width: 100%;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.05rem;
-}
-
-.home-page .project-card {
-  min-height: 620px;
-  display: flex;
-  flex-direction: column;
-}
-
-.home-page .project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: auto;
-  object-fit: contain;
-  background: transparent;
-}
-
-.home-page .project-card .card-body {
-  padding: 1.25rem;
-  flex: 1;
-}
-
-.home-page .project-card .card-body h3 {
-  font-size: clamp(1.05rem, 1.4vw, 1.45rem);
-}
-
-.home-page .project-card .card-body p {
-  font-size: clamp(.9rem, 1.05vw, 1.05rem);
-  line-height: 1.55;
-}
-
-@media (max-width: 1300px) {
-  .home-page .project-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
-  .home-page .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 620px) {
-  .home-page .home-hero {
-    padding-top: 1.5rem;
-  }
-
-  .home-page .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-page .project-card {
-    min-height: auto;
-  }
-
-  .home-page .project-card img {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
 </head>
-<body class="home-page">
+<body class="">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="nav-wrap">
-<a class="brand" href="index.html"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
+<a class="brand" href="./"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
-<nav aria-label="Primary navigation" class="site-nav"><a aria-current="page" href="index.html">Home</a><a href="Optimal.html">Optimal</a><a href="ROX.html">ROX</a><a href="YourVoiceInverclyde.html">Your Voice</a><a href="Freelance.html">Freelance</a><a href="Dingbro.html">Dingbro</a><a href="CV.html">CV</a></nav>
+<nav aria-label="Primary navigation" class="site-nav"><a aria-current="page" href="./">Home</a><a href="Optimal/">Optimal</a><a href="ROX/">ROX</a><a href="YourVoiceInverclyde/">Your Voice</a><a href="Freelance/">Freelance</a><a href="Dingbro/">Dingbro</a><a download="FinlayCraigCV.pdf" href="FinlayCraigCV.pdf">CV</a></nav>
 </div>
 </header>
 <main id="main">
-<section class="hero compact home-hero">
+<section class="hero compact">
 <div>
 <p class="eyebrow">Communications, engagement and design</p>
 <h1>Finlay Craig</h1>
+<p class="lede">A portfolio of communications, engagement, graphic design, digital content, web, campaign and marketing work.</p>
+<div class="actions">
+<a class="button" href="#projects">View projects</a>
+<a class="button secondary" download="FinlayCraigCV.pdf" href="FinlayCraigCV.pdf">Download CV</a>
+</div>
 </div>
 </section>
 <section class="section" id="projects">
-<div class="section-header home-project-header"><div><p class="eyebrow">Selected work</p><h2>Projects</h2></div></div>
-<div class="project-grid"><a class="card project-card" href="Optimal.html"><img alt="Optimal work preview" loading="lazy" src="Home page thumbnail.png"/><div class="card-body"><h3>Optimal</h3><p>Marketing, website development, project management, coding, AI automation and video editing.</p></div></a>
-<a class="card project-card" href="ROX.html"><img alt="ROX - Diamonds &amp; Thrills preview" loading="lazy" src="ROXIntroSmall.jpg"/><div class="card-body"><h3>ROX - Diamonds &amp; Thrills</h3><p>Luxury jewellery marketing, magazine, email, social and web design.</p></div></a><a class="card project-card" href="YourVoiceInverclyde.html"><img alt="Your Voice Inverclyde preview" loading="lazy" src="YourVoiceThumbnail1.jpeg"/><div class="card-body"><h3>Your Voice Inverclyde</h3><p>Communications, engagement, reporting, outreach and web content.</p></div></a><a class="card project-card" href="Freelance.html"><img alt="Freelance Design preview" loading="lazy" src="Freelance3small.jpg"/><div class="card-body"><h3>Freelance Design</h3><p>Branding, illustration, animation, flyers, web and creative design projects.</p></div></a><a class="card project-card" href="Dingbro.html"><img alt="Dingbro Ltd preview" loading="lazy" src="AgriBack2.jpg"/><div class="card-body"><h3>Dingbro Ltd</h3><p>Product flyers, offer sheets, internal campaigns and catalogue-style layouts.</p></div></a>
+<div class="section-header"><div><p class="eyebrow">Selected work</p><h2>Projects</h2></div><p>Case studies and visual examples across asset management marketing, luxury retail, third sector communications, freelance design and automotive marketing.</p></div>
+<div class="project-grid"><a class="card project-card" href="Optimal/"><img alt="Optimal work preview" loading="lazy" src="Home page thumbnail.png"/><div class="card-body"><h3>Optimal</h3><p>Marketing, website development, project management, coding, AI automation and video editing.</p></div></a>
+<a class="card project-card" href="ROX/"><img alt="ROX - Diamonds &amp; Thrills preview" loading="lazy" src="ROXIntroSmall.jpg"/><div class="card-body"><h3>ROX - Diamonds &amp; Thrills</h3><p>Luxury jewellery marketing, magazine, email, social and web design.</p></div></a><a class="card project-card" href="YourVoiceInverclyde/"><img alt="Your Voice Inverclyde preview" loading="lazy" src="YourVoiceThumbnail1.jpeg"/><div class="card-body"><h3>Your Voice Inverclyde</h3><p>Communications, engagement, reporting, outreach and web content.</p></div></a><a class="card project-card" href="Freelance/"><img alt="Freelance Design preview" loading="lazy" src="Freelance3small.jpg"/><div class="card-body"><h3>Freelance Design</h3><p>Branding, illustration, animation, flyers, web and creative design projects.</p></div></a><a class="card project-card" href="Dingbro/"><img alt="Dingbro Ltd preview" loading="lazy" src="AgriBack2.jpg"/><div class="card-body"><h3>Dingbro Ltd</h3><p>Product flyers, offer sheets, internal campaigns and catalogue-style layouts.</p></div></a>
 </div>
 </section>
 </main>
@@ -131,8 +47,6 @@
 <span><a href="https://www.linkedin.com/in/finlaycraig" rel="noopener noreferrer" target="_blank">LinkedIn</a></span>
 </div>
 </footer>
-
-
 <div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
 <button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
 <img alt="" src=""/>
