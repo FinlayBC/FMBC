@@ -1,261 +1,110 @@
 <!DOCTYPE html>
-<html>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<html lang="en">
 <head>
-<!------------------------------------------------------- Background ----------------------------------------------------------------->
-  <title>About Me</title>
-  <style>
-   
-   html {
-	height: 100%;
-	width: 100%;
-   }
-   
-   body {
-    margin: 0px;
-    padding: 0px;
-	height: 100%;
-	width: 100%;
-	background-color: #111111;
-    font-family: sans-serif;
-   }
-   
-   .wrapper {
-	padding: 0px;
-	padding-top: 11px;
-	display: inline-block
-   }
-   
-<!------------------------------------------------------- Navigation ----------------------------------------------------------------->
-   
-   li {
-    float: left;
-    list-style-type: none;
-   }
-  
-   li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-   }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>About Me</title>
+<link href="FMBC2.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="dark-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav"><a href="index.html">Home</a><a href="Optimal.html">Optimal</a><a href="ROX.html">ROX</a><a href="YourVoiceInverclyde.html">Your Voice</a><a href="Freelance.html">Freelance</a><a href="Dingbro.html">Dingbro</a><a href="CV.html">CV</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="section">
+<div class="about-panel">
+<div><img alt="Portrait and personal design image" loading="lazy" src="AboutMeWebsite.jpg"/></div>
+<div>
+<p class="eyebrow">About</p>
+<h1>About Me</h1>
+<p>I currently work as a freelance graphic and web designer, designing flyers, logos, animations, websites, banners, posters, video editing, T-shirts and tattoos. I love the varied and interesting work this career path affords me.</p>
+<p>I am passionate about design, always eager to learn new styles and adapt to different briefs. My need for precision drives me to pursue new heights and dedicate myself to everything I do.</p>
+<p>I am a strong team player with interpersonal and communication skills developed through work projects, team sports and group-based university assignments. I am confident working under my own initiative, ambitious, enthusiastic and tenacious.</p>
+<p>I have worked in several industries at the heart of Aberdeen, learning a great deal about the inner workings of local companies and their needs.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-wrap">
+<strong>Finlay Craig</strong>
+<span><a href="mailto:finlaycraig96@googlemail.com">finlaycraig96@googlemail.com</a></span>
+<span>07898111358</span>
+<span><a href="https://www.linkedin.com/in/finlaycraig" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+</div>
+</footer>
 
-   li a:hover {
-    background-color: #111;
-   }
-   
-   .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #ffffff;
-    margin: 6px 0;
-    transition: 0.4s;
-	z-index: 100;
-   }
 
-   /* Rotate first bar */
-   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-	background-color: #ffffff;
-   }
+<div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+</div>
 
-   /* Fade out the second bar */
-   .change .bar2 {
-    opacity: 0;
-   }
-
-   /* Rotate last bar */
-   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-	background-color: #ffffff;
-   }
-   
-  .center {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
-   scroll-behavior: smooth;
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
   }
 
-<!------------------------------------------------------- Header ------------------------------------------------------------------>
-  
-   .header {
-    padding: 0px 0px;
-    background: #555;
-    color: #f1f1f1;
-   }
-  
-   .footer {
-    position: bottom;
-    width: 100%;
-    color: #f1f1f1;
-    text-align: center;
-    opacity: 0.8;
-    background-color: #141414;
-	padding-top:10px;
-	padding-bottom:10px;
-   }
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+  const expandableImages = document.querySelectorAll('.gallery img, .case-card > img, .cv-frame img, .about-panel img');
 
-   .content {
-    padding: 16px;
-   }
-  
-   #mySidebar {
-    position: fixed;
-    width:150px;
-    height:100%;
-    background-color:#000000;
-    display:none;
-    z-index: 9998;
-   }
-   
-   #smoothScroller {
-    scroll-behavior: smooth;
-   }
-   
-   .paragraphText{
-     font-size:22px; 
-	 color: white; 
-	 padding:12px; 
-	 padding-left:18px;
-	 padding-right:18px;
-     LINE-HEIGHT:25px;
-   }
-   
-   .sideBarButton{
-    transition: transform .3s;
-   }
-  
-   .sideBarButton:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-   }
+  function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Expanded portfolio image';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (lightboxClose) lightboxClose.focus();
+  }
 
-  canvas {display:block;}
- 
- </style>
- </header>
-<!-------------------------------------------------------- Body ------------------------------------------------------------------->
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
 
-<!----------------------------------------------------- Top Banner ---------------------------------------------------------------->
+  expandableImages.forEach((image) => {
+    image.classList.add('expandable-image');
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', 'Open image larger');
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
 
- <body>
- 
-    <canvas id="c" width="1920px" height="950px" style= "position: absolute; background-color: #111111;"></canvas>
- 
-    <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
-     <div class="bar1"></div>
-     <div class="bar2"></div>
-     <div class="bar3"></div>
-    </div>
-	
-	<div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px; background-color: #000000;" id="mySidebar">
-     <br></br>
-	 <ul>
-     <li class="sideBarButton"><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
-     <li class="sideBarButton"><a href="CV.html", style="font-size:20px">CV</a></li>
-	 <br></br>
-	 <img src="FMBC.png" style="width:50%;" class="center">
-	 </ul>
-    </div>
-   
-   <br></br>
-   
-   <div style="	background-color: #111111;; width:80%; position: relative; left: 10%; padding-bottom:0px; opacity:90%">
-     <p style="color:white; font-size:30px; padding:8px; padding-top:30px; padding-left:18px;">About Me</p>
-	 <img src="selfie.jpg"; alt="Me"; align= "right"; width= 30%; hspace="20";>
-     <p class="paragraphText">
-	   I currently work as a freelance graphic and web designer; designing flyers, logos, animations, websites, banners, posters, video editing, t-shirts and tattoos.
-	   I love the varied and interesting work this career path affords me. 
-	   I strive to pursue this area of work in a more assured capacity, 
-	   as part of a design company, with ambitions to work in management in the future.
-	 </p>
-	   
-	 <p class="paragraphText">
-	   I am very passionate about design, always eager to learn new styles and adapt to different briefs. My need for perfection drives me to pursue new heights and dedicate myself in everything I do.
-	 </p>
-	   
-	 <p class="paragraphText">
-	   I am a great team player with interpersonal and communication skills developed through work projects, 
-	   team sports and various group based university assignments. I am a confident individual, able to work 
-	   under my own initiative. Very ambitious, enthusiastic and tenacious.
-	 </p>
-	 
-	 <p class="paragraphText">
-	   I have worked in several industries which are all at the very heart of Aberdeen, learning much in the process about the inner workings of local companies and their needs.	   
-	 </p>
-	    <br></br>
-		<br></br>
-		<br></br>
-		<br></br>
-   </div>	 
-
-   <br></br>
-   
-	<div class="footer" style= "position: fixed; bottom:0%;">
-     <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
-    </div>
-
-<!-------------------------------------------------------- Script ----------------------------------------------------------------->
-
-  <script>
-  
-  <!----------------------------------------------- Sidebar --------------------------------------------->
-  
-   function w3_open(x) {
-    x.classList.toggle("change");
-	
-	if (document.getElementById("mySidebar").style.display === "block"){
-	 document.getElementById("mySidebar").style.display = "none";
-	} else {
-	 document.getElementById("mySidebar").style.display = "block";
-	}
-   }
-   
-   <!--------------------------------------------- Bouncing Balls -------------------------------------->   
-   
-   var c = document.getElementById("c");
-        var ctx = c.getContext("2d");
-
-        c.height = window.innerHeight;
-        c.width = window.innerWidth;
-
-        var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-        matrix = matrix.split("");
-
-        var font_size = 10;
-        var columns = c.width/font_size;
-        var drops = [];
-
-        for(var x = 0; x < columns; x++)
-            drops[x] = 1; 
-
-        function draw()
-        {
-
-            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-            ctx.fillRect(0, 0, c.width, c.height);
-
-            ctx.fillStyle = "#03A062";//green text
-            ctx.font = font_size + "px arial";
-            for(var i = 0; i < drops.length; i++)
-            {
-                var text = matrix[Math.floor(Math.random()*matrix.length)];
-                ctx.fillText(text, i*font_size, drops[i]*font_size);
-
-                if(drops[i]*font_size > c.height && Math.random() > 0.975)
-                    drops[i] = 0;
-                //incrementing Y coordinate
-                drops[i]++;
-            }
-        }
-
-        setInterval(draw, 35);
-
-  </script> 
- </body>
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
 </html>

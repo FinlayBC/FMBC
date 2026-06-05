@@ -1,545 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" >
+
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <title>Your Voice Inverclyde</title>
-  <link rel="icon" type="image/x-icon" href="FMBC2.png">
-<style>
-
-   .header {
-    padding: 0px 0px;
-    background: #555;
-    color: #000000;
-    scroll-behavior: smooth;
-   }
-
-   .ibt {
-    border-radius: 15px;
-    display: flex;
-    flex-wrap: wrap;
-	background-color: #59A7EB;
-   }
-   
-   .ibt >div {
-     margin: 0.875em;
-     min-width: 0;
-   }
-
-   .ibt .ibt-i {
-    background-color: #59A7EB;
-    width: 0;
-    min-width: 240px;
-    flex-grow: 1;
-    color: #59A7EB;
-   }
-   
-   .ibt .ibt-t {
-    background-color: #59A7EB;
-    flex-grow: 1;
-    width: 0;
-    min-width: 320px;
-    color: #E6F3FF;
-   }
-
-   .textheader {
-    padding-top: 10px;
-    padding-left: 40px;
-    font-size:30px !important;
-   }
-   
-   .bodytext {
-    padding-left: 1px;
-    padding-top: 30px;
-    padding-right: 30px;
-    font-size:22px !important;
-	line-height: 1.2;
-   }
-
-   img {
-    max-width: 100%;
-    width: auto;
-   }
-
-   * {
-    box-sizing: border-box;
-   }
-
-   @media screen and (min-width: 600px) {
-    .mobileview {
-     display: none;
-    }
-	.headercontainermob{
-	 display: none;
-	}
-	.headerintrotext{
-     font-size: 40px;
-    }
-   }
-
-   @media screen and (max-width: 600px) {
-    .desktopview {
-     display: none;
-    }
-	.headercontainer{
-	 display: none;
-	}
-	.headerintrotext{
-     font-size: 20px;
-    }
-	.textheader {
-	 font-size: 22px !important;
-	}
-   }
-   
-   div.headercontainermob {
-    max-width: 90%;
-    margin: auto;
-    color: #002C45;
-    text-align: center;
-	border-radius: 25px;
-   }
-
-   div.mobileview {
-    color: #ffffff;
-   }
-
-   div.headercontainer {
-    background-color: #FFFFFF;
-    max-width: 60%;
-    margin: auto;
-    color: #002C45;
-    text-align: center;
-	border-radius: 25px;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 40px;
-    padding-top: 40px;
-   }
-
-   div.bodycontainer {
-    max-width: 65%;
-    margin: auto;
-    color: #ffffff;
-   }
-   
-   div.mobilecontainer{
-    background-color: #59A7EB;
-	border-radius: 15px;
-    max-width: 95%;
-    margin: auto;
-    color: #ffffff;
-   }
-
-<!-------------------------------------------------------- Sidebar ------------------------------------------------------------------->
-
-   html{
-    margin: 0.00;
-    padding: 0.00;
-	height: 100%;
-	scroll-behavior: smooth;
-   }  
-
-   body {
-    margin: 0.00;
-    padding: 0.00;
-	height: 100%;
-    font-family: sans-serif;
-	background-color: #ffffff;
-    scroll-behavior: smooth;
-   }
-       
-  .center {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
-   scroll-behavior: smooth;
-  }
-  
-  .wrapper {
-    text-align: center;
-  }
-  
-  div.sticky {
-   position: -webkit-sticky;
-   position: sticky;
-   top: 0;
-   background-color: #111111;
-  }
-  
-<!------------------------------------------------------- Navigation ----------------------------------------------------------------->
-
-   li {
-    float: left;
-    list-style-type: none;
-	color: black;
-	
-   }
-  
-   li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-	list-style-type: none
-   }
-
-   li a:hover {
-    background-color: #000000;
-	color: white;
-   }
-   
-   .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #000000;
-    margin: 6px 0;
-    transition: 0.4s;
-	z-index: 100;
-   }
-
-   /* Rotate first bar */
-   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-    background-color: #000000;
-   }
-
-   /* Fade out the second bar */
-   .change .bar2 {
-    opacity: 0;
-   }
-
-   /* Rotate last bar */
-   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-    background-color: #000000;
-   }
-
-
-<!------------------------------------------------------- Header ------------------------------------------------------------------>
-
-  
-  .footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #000000;
-    text-align: center;
-    opacity: 0.8;
-    background-color: #ffffff;
-	padding-top:10px;
-	padding-bottom:10px;
-  }
-  
-  #mySidebar {
-   position:fixed;
-   width:150px;
-   height:100%;
-   background-color:#ffffff;
-   color-:#000000;
-   display:none;
-   z-index: 9998;
-   filter: drop-shadow(5px 5px 10px #919191);
-  }
-  
-  .sideBarButton{
-    transition: transform .3s;
-  }
-  
-  .sideBarButton:hover {
-   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  
-  #smoothScroller {
-   scroll-behavior: smooth;
-  }
-  
-  #wrapper {
-   width: 70%;
-   margin: 0 auto;
-  }    
-  
-  
-
-</style>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Your Voice Inverclyde</title>
+<link href="FMBC2.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
 </head>
-<body>
-
-
- <link rel="icon" href="FMBC.jpg">
- 
-    <div style="padding: 30px; z-index: 10000; position: fixed;">
-	 
-    </div>
- 
-    <div class="sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:200px;" id="mySidebar">
-     <br></br>
-	 <ul style="list-style-type: none;">
-	 <img src="FMBC.jpg" style="width:40%; " class="center">
-	 <li class="sideBarButton"><a href="index.html", style="font-size:20px; font-family: sans serif;">Home</a></li>
-     <li class="sideBarButton"><a href="ROX.html", style="font-size:20px; font-family: sans serif;">ROX</a></li>
-	 <li class="sideBarButton"><a href="Freelance.html", style="font-size:20px; font-family: sans serif;">Freelance</a></li>
-     <li class="sideBarButton"><a href="Dingbro.html", style="font-size:20px; font-family: sans serif;">Dingbro</a></li>
-	 <br></br>
-	 </ul>
-    </div>
- 
-    <div style="padding: 30px; z-index: 10000; position: fixed;" onclick= "w3_open(this)">
-     <div class="bar1"></div>
-     <div class="bar2"></div>
-     <div class="bar3"></div>
-    </div>
-
-
-
-<!-- Intro -->
-
-<div class="headercontainer">
-<img src="YourVoiceLogo.png" style="width:8%" loading="lazy">
-<h1 class="headerintrotext" style="text-align: center;">Communications and Engagement - Your Voice Inverclyde</h1>
-<p style="text-align: justify; margin: 0 auto;">Your Voice is a non-profit organisation based in Greenock, Inverclyde. Your Voice has existed for 32 years, helping raise awareness about health and social issues, championing positive local change. We work with a wide variety of personal backgrounds and age ranges, including those in recovery from addiction, cancer, young people, carers and the socially isolated.
-<br></br>This was a fantastic opportunity to gain experience working with people I would not usually come into contact with, helping them share about their experiences, sharing information with them and improving their situations.
-<br></br>Please scroll down for an overview of my responsibilities, accomplishments and some examples of my work.</p>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav"><a href="index.html">Home</a><a href="Optimal.html">Optimal</a><a href="ROX.html">ROX</a><a aria-current="page" href="YourVoiceInverclyde.html">Your Voice</a><a href="Freelance.html">Freelance</a><a href="Dingbro.html">Dingbro</a><a href="CV.html">CV</a></nav>
 </div>
-
-
-<div class="headercontainermob">
-<br></br>
-<img src="YourVoiceLogo.png" style="width:15%" loading="lazy">
-<h1 class="headerintrotext" style="text-align: center;">Communications and Engagement - Your Voice Inverclyde</h1>
-<p style="text-align: justify; margin: 0 auto;">Your Voice is a non-profit organisation based in Greenock, Inverclyde. Your Voice has existed for 32 years, helping raise awareness about health and social issues, championing positive local change. We work with a wide variety of personal backgrounds and age ranges, including those in recovery from addiction, cancer, young people, carers and the socially isolated.
-<br></br>This was a fantastic opportunity to gain experience working with people I would not usually come into contact with, helping them share about their experiences, sharing information with them and improving their situations.
-<br></br>Please scroll down for an overview of my responsibilities, accomplishments and some examples of my work.</p>
+</header>
+<main id="main">
+<section class="hero compact">
+<div>
+<p class="eyebrow">Communications and engagement</p>
+<h1>Your Voice Inverclyde</h1>
+<p class="lede">Communications and engagement work for a Greenock-based non-profit organisation supporting health, social issues and positive local change.</p>
 </div>
-
-
-<div class="bodycontainer">
-<!-- Desktop View -->
-<div class="desktopview" >
-<!-- Social Media -->
-<div class="ibt">
-  <div class="ibt-t">
-    <h2 class="textheader">Social Media Management</h2>
-    <p class="bodytext" style="padding-left: 40px; padding-top: 30px;">Overseeing and designing content to increase Your Voice's online presence, developing the brand, creating paid adverts to garner interest in the organisation. Analysing the performance of content to tailor future strategies. Monitoring messages and comments, responding in a timely manner. Writing copy for social media posts, with CTA's encouraging the public to get involved. <br></br>Designing media bursts, posters, leaflets and videos to promote our upcoming events, surveys and ongoing projects. This is accomplished through the use of Adobe Suite, as well as online resources such as Adobe Express and Canva.
-	<br></br>
-	Some examples can be viewed by clicking below:</p>
-	<p style="padding-left: 40px; padding-top: 0px; font-size:22px !important;">
-	<a href="https://www.yourvoice.org.uk/socials" target="_blank" style="font-weight: bold; font-size:22px !important;">Your Voice Social Media Links</a>
-	</p>
-	<p style="padding-left: 40px; padding-top: 0px;">
-	<a href="https://youtu.be/_jsMgWELg3E?si=YTvrja7F8msWO1_r" target="_blank" style="font-weight: bold; font-size:22px !important;">Your Voice Recovery Hub Video</a>
-	</p>
-	<p style="padding-left: 40px; padding-top: 0px;">
-	<a href="https://www.youtube.com/watch?v=Tg2mJcQ-2jI" target="_blank" style="font-weight: bold; font-size:22px !important;">New Beginnings - New Scots Short Film</a>
-	</p>
-	<p style="padding-left: 40px; padding-top: 0px;"> 
-	<a href="https://youtu.be/1M4XvFBcNN8" target="_blank" style="font-weight: bold; font-size:22px !important;">Involve Inverclyde</a>
-	</p>
-	<p style="padding-left: 40px; padding-top: 0px;">
-	<a href="https://youtu.be/Sh9AJAOJtxI?si=q0bnXx0qI7Vq8gtr" target="_blank" style="font-weight: bold; font-size:22px !important;">Dementia Friendly Inverclyde</a>
-	</p>
-	<p class="bodytext" style="padding-left: 40px;">Your Voice has seen a massive increase in online engagement since my start in January 2023. This was achieved by updating the organisation's branding, building up our network, sharing events with local community groups, and creating a variety of content such as Live Streams, Videos, Graphics, and Q&A style posts.
-	<br></br>It was important to constantly monitor what was working within the algorithm, to decide what time of day to post, what tags to use, and what to share from other organisations.
-	</p>
-  </div>
-  <div class="ibt-i"><img src="YourVoiceGraphics2.jpg" style="width:100%" loading="lazy"><img src="Facebook.jpeg" style="width:100%" loading="lazy"></div>
+</section>
+<section class="section">
+<div class="case-grid">
+<article class="card case-card"><img alt="Social media management" loading="lazy" src="YourVoiceGraphics2.jpg"/><h3>Social media management</h3><p>Content strategy, paid adverts, brand development and performance analysis to grow online engagement.</p><ul class="link-list"><li><a href="https://www.yourvoice.org.uk/socials" rel="noopener noreferrer" target="_blank">Your Voice social media</a></li><li><a href="https://youtu.be/_jsMgWELg3E?si=YTvrja7F8msWO1_r" rel="noopener noreferrer" target="_blank">Recovery Hub video</a></li><li><a href="https://www.youtube.com/watch?v=Tg2mJcQ-2jI" rel="noopener noreferrer" target="_blank">New Beginnings film</a></li><li><a href="https://youtu.be/1M4XvFBcNN8" rel="noopener noreferrer" target="_blank">Involve Inverclyde</a></li><li><a href="https://youtu.be/Sh9AJAOJtxI?si=q0bnXx0qI7Vq8gtr" rel="noopener noreferrer" target="_blank">Dementia Friendly Inverclyde</a></li></ul></article>
+<article class="card case-card"><img alt="Networking and community outreach" loading="lazy" src="Networking.jpeg"/><h3>Networking and community outreach</h3><p>Partner updates, local communications, press releases and event promotion across community networks.</p><ul class="link-list"><li><a href="InvolveInverclyde.pdf">Involve Inverclyde PDF</a></li></ul></article>
+<article class="card case-card"><img alt="Website management and design" loading="lazy" src="website.jpeg"/><h3>Website management and design</h3><p>SEO, accessibility, web content and project pages, including interactive map content for Green Connections.</p><ul class="link-list"><li><a href="https://www.yourvoice.org.uk" rel="noopener noreferrer" target="_blank">Your Voice Website</a></li><li><a href="https://www.yourvoice.org.uk/greenconnections" rel="noopener noreferrer" target="_blank">Green Connections</a></li></ul></article>
+<article class="card case-card"><img alt="Report writing and design" loading="lazy" src="yvMagazine.jpeg"/><h3>Report writing and design</h3><p>Case studies, funding reports, statistics, report design and organisational impact communications.</p><ul class="link-list"><li><a href="https://bit.ly/yvAnnualReport2024" rel="noopener noreferrer" target="_blank">Annual Report</a></li><li><a href="https://drive.google.com/file/d/1IwJBbOqxNtaiGvURw7iLAMRYvNGyi7rO/view?usp=sharing" rel="noopener noreferrer" target="_blank">Rights of the Child</a></li></ul></article>
+<article class="card case-card"><img alt="Project management" loading="lazy" src="Facebook.jpeg"/><h3>Project management</h3><p>Processes, milestones, objectives, stakeholder coordination and monitoring work against KPIs.</p></article>
+<article class="card case-card"><img alt="IT and security management" loading="lazy" src="YourVoiceThumbnail2.jpeg"/><h3>IT and security management</h3><p>Equipment cataloguing, staff training, Microsoft 365 support and security-aware working practices.</p></article>
+</div></section></main>
+<footer class="site-footer">
+<div class="footer-wrap">
+<strong>Finlay Craig</strong>
+<span><a href="mailto:finlaycraig96@googlemail.com">finlaycraig96@googlemail.com</a></span>
+<span>07898111358</span>
+<span><a href="https://www.linkedin.com/in/finlaycraig" rel="noopener noreferrer" target="_blank">LinkedIn</a></span>
 </div>
-
-<br></br>
-
-
-<!-- Networking -->
-<div class="ibt">
-  <div class="ibt-i"><img src="Networking.jpeg" loading="lazy"></div>
-  <div class="ibt-t">
-    <h2 class="textheader" style="padding-left: 0px;">Networking and Community Outreach</h2>
-    <p class="bodytext">Meeting with partner organisations to stay informed about local developments, providing updates about Your Voice in turn. 
-	Creating press releases for local officials and press contacts, to promote upcoming events and mark milestone accomplishments.	
-	<br></br>Regularly getting out into the community, meeting one-to-one with people to make new connections and expand the network. Your Voice regularly runs surveys with the NHSGGC and HSCP, as well as national organisations like AGE UK and Macmillan.
-	<br></br>I lead on the <a href="InvolveInverclyde.pdf" target="_blank" style="font-weight: bold;">Involve Inverclyde</a> project, which engages with the community to gather feedback regarding health and social care issues. This was achieved by hosting quarterly events in our offices, as well as larger planned events such as the Carers Beacon event, which saw 65 carers and 20 members of staff sharing their experiences and thinking of new ways to help local unpaid carers.
-	<br></br>Your Voice has fostered a close relationship with the local Greenock Telegraph newspaper, which helps shed light on everything we do. I keep them updated on our accomplishments and plans, they use this to run stories about our clients, volunteers and projects.
-	</p>
-  </div>
-</div>
+</footer>
 
 
-<br></br>
+<div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+</div><script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
 
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+  const expandableImages = document.querySelectorAll('.gallery img, .case-card > img, .cv-frame img, .about-panel img');
 
+  function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Expanded portfolio image';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (lightboxClose) lightboxClose.focus();
+  }
 
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
 
-<!-- Website -->
-<div class="ibt">
+  expandableImages.forEach((image) => {
+    image.classList.add('expandable-image');
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', 'Open image larger');
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
 
-  <div class="ibt-t" >
-    <h2 class="textheader">Website Management and Design</h2>
-    <p class="bodytext" style="padding-left: 40px;">I was able to greatly improve the SEO performance & accessibility of the website, increasing our search engine ranking for specific keywords. I created & updated content to increase online performance and engagement. The <a href="https://www.yourvoice.org.uk" target="_blank" style="font-weight: bold;">Your Voice Website</a> is built using SquareSpace, which creates a base framework for the website but allows customisation and the embedding of content such as iframes.</p>
-    <p class="bodytext" style="padding-left: 40px;">
-	 A good example is the page for my <a href="https://www.yourvoice.org.uk/greenconnections" target="_blank" style="font-weight: bold;">Green Connections </a>project, which required the embedding of OpenStreetMaps, an interactive map which allows visitors to explore the area and understand the plans more fully.
-	</p>
-  </div>
-    <div class="ibt-i"><img src="website.jpeg" style="width:100%" loading="lazy"></div>
-</div>
-
-<br></br>
-
-<!-- Report Writing -->
-<div class="ibt">
-  <div class="ibt-t">
-    <h2 class="textheader">Report Writing and Design</h2>
-    <p class="bodytext" style="padding-left: 40px; padding-top: 30px;">An important part of my role surrounds the creation of case studies and report writing, reporting organisational successes in order to secure funding. This involved researching, collating and analysing statistics, creating reports and infographics to present data in easily digestible formats. Creating surveys and feedback opportunities to gather information from stakeholders.
-    <br></br>
-	Our <a href="https://bit.ly/yvAnnualReport2024" target="_blank" style="font-weight: bold;">Annual Report</a> contains updates and milestones from every ongoing project, as well as organisational developments and plans for the future.
-    <br></br>
-	Reports such as the iPromise <a href="https://drive.google.com/file/d/1IwJBbOqxNtaiGvURw7iLAMRYvNGyi7rO/view?usp=sharing" target="_blank" style="font-weight: bold;"> Inverclyde Rights of the Child</a> have garnered national interest, helping other districts and Health Boards learn from our success and develop their own approach to young people.
-	</p>
-
-  </div>
-  <div class="ibt-i"><img src="yvMagazine.jpeg" style="width:100%" loading="lazy"></div>
-</div>
-
-<br></br>
-
-<!-- Project Management -->
-<div class="ibt">
-  <div class="ibt-t">
-    <h2 class="textheader">Project Management</h2>
-    <p class="bodytext" style="padding-left: 40px;">Leading and collaborating with team members and stakeholders, creating processes, guidelines, milestones and objectives. Planning regular catchups, monitoring and adapting projects to meet key deliverables.</p>
-  </div>
-</div>
-
-<br></br>
-
-<!-- IT and Training -->
-<div class="ibt">
-  <div class="ibt-t">
-    <h2 class="textheader">IT & Security Management and Training</h2>
-    <p class="bodytext" style= "padding-left: 40px;">Setting up, cataloguing and maintaining IT equipment. Training staff to use organisationally used software such as SharePoint, Microsoft Office, Teams and Emails. Ensuring security protocols and staff behaviour are in line with Organisational and GDPR Policies.  </div>
-</div>
-</div>
-</div>
-
-<br></br>
-
-
-
-
-
-
-
-
-
-<!-- Mobile View --------------------------------------------------------------->
-<div class="mobileview">
-<!-- Social Media -->
-  <div class="ibt-i"><img src="YourVoiceGraphics2.jpg" style="width:100%" loading="lazy"></div>
-  <div class="ibt-i"><img src="Facebook.jpeg" style="width:100%" loading="lazy"></div>
-<div class="mobilecontainer">
-    <h2 class="textheader" style="padding-top: 40px; padding-right: 30px;">Social Media Management</h2>
-    <p  style="padding-left: 40px; padding-right: 40px;">Overseeing and designing content to increase Your Voice's online presence, developing the brand, creating paid adverts to garner interest in the organisation. Analysing the performance of content to tailor future strategies. Monitoring messages and comments, responding in a timely manner. Writing copy for social media posts, with CTA's encouraging the public to get involved. <br></br>Designing media bursts, posters, leaflets and videos to promote our upcoming events, surveys and ongoing projects. This is accomplished through the use of Adobe Suite, as well as online resources such as Adobe Express and Canva.
-	<br></br>
-	Some examples can be viewed by clicking below:
-	<br></br>
-	<a href="https://www.yourvoice.org.uk/socials" target="_blank" style="font-weight: bold;">Your Voice Social Media Links</a>
-	<br></br>
-	<a href="https://youtu.be/_jsMgWELg3E?si=YTvrja7F8msWO1_r" target="_blank" style="font-weight: bold;">Your Voice Recovery Hub Video</a>
-	<br></br>
-	<a href="https://www.youtube.com/watch?v=Tg2mJcQ-2jI" target="_blank" style="font-weight: bold;">New Beginnings - New Scots Short Film</a>
-	<br></br>
-	<a href="https://youtu.be/1M4XvFBcNN8" target="_blank" style="font-weight: bold;">Involve Inverclyde</a>
-	<br></br>
-	<a href="https://youtu.be/Sh9AJAOJtxI?si=q0bnXx0qI7Vq8gtr" target="_blank" style="font-weight: bold;">Dementia Friendly Inverclyde</a>
-	<br></br>
-	Your Voice has seen a massive increase in online engagement since my start in January 2023. This was achieved by updating the organisation's branding, building up our network, sharing events with local community groups, and creating a variety of content such as Live Streams, Videos, Graphics, and Q&A style posts.
-	<br></br>It was important to constantly monitor what was working within the algorithm, to decide what time of day to post, what tags to use, and what to share from other organisations.
-	<br></br>
-	</p>
-  </div>
-
-
-
-<!-- Networking -->
-
-<div class="ibt-i"><img src="Networking.jpeg" loading="lazy"></div>
-<div class="mobilecontainer">
-    <h2 class="textheader" style="padding-left: 40px; padding-top: 40px; padding-right: 30px;">Networking and Community Outreach</h2>
-    <p style="padding-left: 40px; padding-right: 40px;">Meeting with partner organisations to stay informed about local developments, providing updates about Your Voice in turn. 
-	Creating press releases for local officials and press contacts, to promote upcoming events and mark milestone accomplishments.	
-	<br></br>Regularly getting out into the community, meeting one-to-one with people to make new connections and expand the network. Your Voice regularly runs surveys with the NHSGGC and HSCP, as well as national organisations like AGE UK and Macmillan.
-	<br></br>I lead on the <a href="InvolveInverclyde.pdf" target="_blank" style="font-weight: bold;">Involve Inverclyde</a> project, which engages with the community to gather feedback regarding health and social care issues. This was achieved by hosting quarterly events in our offices, as well as larger planned events such as the Carers Beacon event, which saw 65 carers and 20 members of staff sharing their experiences and thinking of new ways to help local unpaid carers.
-	<br></br>Your Voice has fostered a close relationship with the local Greenock Telegraph newspaper, which helps shed light on everything we do. I keep them updated on our accomplishments and plans, they use this to run stories about our clients, volunteers and projects.
-	<br></br>
-	</p>
-</div>
-
-<!-- Magazine -->
-<div class="ibt-i"><img src="website.jpeg" style="width:100%" loading="lazy"></div>
-<div class="mobilecontainer">
-    <h2 class="textheader" style="padding-left: 40px; padding-top: 40px;">Website Management and Design</h2>
-    <p style="padding-left: 40px; padding-right: 40px;">I was able to greatly improve the SEO performance & accessibility of the website, increasing our search engine ranking for specific keywords. I created & updated content to increase online performance and engagement. The <a href="https://www.yourvoice.org.uk" target="_blank" style="font-weight: bold;">Your Voice Website</a> is built using SquareSpace, which creates a base framework for the website but allows customisation and the embedding of content such as iframes.
- 	<br></br>
-	 A good example is the page for my <a href="https://www.yourvoice.org.uk/greenconnections" target="_blank" style="font-weight: bold;">Green Connections </a>project, which required the embedding of OpenStreetMaps, an interactive map which allows visitors to explore the area and understand the plans more fully.
-	<br></br>
-	</p>
-</div>
-
-<!-- Report Writing -->
-  <div class="ibt-i"><img src="yvMagazine.jpeg" style="width:100%" loading="lazy"></div>
-<div class="mobilecontainer">
-    <h2 class="textheader" style="padding-top: 40px; padding-right: 30px;">Report Writing and Design</h2>
-    <p style="padding-left: 40px; padding-right: 30px;">An important part of my role surrounds the creation of case studies and report writing, reporting organisational successes in order to secure funding. This involved researching, collating and analysing statistics, creating reports and infographics to present data in easily digestible formats. Creating surveys and feedback opportunities to gather information from stakeholders.
-    <br></br>
-	Our <a href="https://bit.ly/yvAnnualReport2024" target="_blank" style="font-weight: bold;">Annual Report</a> contains updates and milestones from every ongoing project, as well as organisational developments and plans for the future.
-	<br></br>
-	Reports such as the iPromise <a href="https://drive.google.com/file/d/1IwJBbOqxNtaiGvURw7iLAMRYvNGyi7rO/view?usp=sharing" target="_blank" style="font-weight: bold;"> Inverclyde Rights of the Child</a> have garnered national interest, helping other districts and Health Boards learn from our success and develop their own approach to young people.
-	<br></br>
-	</p></p>
-</div>
-
-<!-- Project Management -->
-
-<div class="mobilecontainer">
-    <h2 class="textheader" style="padding-top: 40px; padding-right: 30px;">Project Management</h2>
-    <p style="padding-left: 40px;">Leading and collaborating with team members and stakeholders, creating processes, guidelines, milestones and objectives. Planning regular catchups, monitoring and adapting projects to meet key deliverables and KPIs.</p>
-    <br></br>
-</div>
-
-<!-- IT -->
-<div class="mobilecontainer">
-   <h2 class="textheader" style="padding-top: 40px; padding-right: 30px;">IT & Security Management and Training</h2>
-   <p style= "padding-left: 40px; padding-right: 40px;">Setting up, cataloguing and maintaining IT equipment. Training staff to use organisational software such as SharePoint, 365, Microsoft Office, Teams and Emails. Ensuring security protocols and staff behaviour are in line with Organisational and GDPR Policies.  
-   <br></br>
-</div>
-</div>
-
-
-
-<div class="footer" style="text-align: center;">
-  <p>finlaycraig96@googlemail.com &ensp;&ensp;&ensp; 07898111358 &ensp;&ensp;&ensp; <a href="https://www.linkedin.com/in/finlaycraig">www.linkedin.com/in/finlaycraig</a></p>
-</div>
-   
-   
-<script>
-   function w3_open(x) {
-    x.classList.toggle("change");
-	
-	if (document.getElementById("mySidebar").style.display === "block"){
-	 document.getElementById("mySidebar").style.display = "none";
-	} else {
-	 document.getElementById("mySidebar").style.display = "block";
-	}
-   }
-</script>
-   
-   
-   
-
-</body>
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script></body>
 </html>
