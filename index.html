@@ -10,9 +10,69 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="css/styles.css" rel="stylesheet"/>
+
+<style>
+/* Homepage spacing adjustment */
+.hero.compact {
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: 0.75rem;
+}
+
+.hero.compact h1 {
+  margin-bottom: 0;
+}
+
+#projects {
+  padding-top: 1rem;
+}
+
+/* Homepage project grid: 3 cards on first row, 2 centred below */
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+#projects .project-card {
+  grid-column: span 2;
+}
+
+#projects .project-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+#projects .project-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+#projects .project-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  #projects .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #projects .project-card,
+  #projects .project-card:nth-child(4),
+  #projects .project-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  #projects .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 <body class="">
-<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="nav-wrap">
 <a class="brand" href="./"><img alt="FMBC logo" src="FMBC.jpg"/><span>FMBC</span></a>
@@ -25,12 +85,11 @@
 <div>
 <p class="eyebrow">Communications, engagement and design</p>
 <h1>Finlay Craig</h1>
-<p class="lede">A portfolio of communications, engagement, graphic design, digital content, web, campaign and marketing work.</p>
 </div>
 </section>
 <section class="section" id="projects">
 <div class="section-header"><div><p class="eyebrow">Selected work</p><h2>Projects</h2></div><p></p></div>
-<div class="project-grid"><a class="card project-card" href="Optimal/"><img alt="Optimal work preview" loading="lazy" src="Home page thumbnail.png"/><div class="card-body"><h3>Optimal</h3><p>Marketing, website development, project management, coding, AI automation and video editing.</p></div></a>
+<div class="project-grid"><a class="card project-card" href="Optimal/"><img alt="Optimal work preview" loading="lazy" src="Home page thumbnail.png"/><div class="card-body"><h3>Optimal</h3><p>Management, marketing, website development, project management, coding, AI automation and video editing.</p></div></a>
 <a class="card project-card" href="ROX/"><img alt="ROX - Diamonds &amp; Thrills preview" loading="lazy" src="ROXIntroSmall.jpg"/><div class="card-body"><h3>ROX - Diamonds &amp; Thrills</h3><p>Luxury jewellery marketing, magazine, email, social and web design.</p></div></a><a class="card project-card" href="YourVoiceInverclyde/"><img alt="Your Voice Inverclyde preview" loading="lazy" src="YourVoiceThumbnail1.jpeg"/><div class="card-body"><h3>Your Voice Inverclyde</h3><p>Communications, engagement, reporting, outreach and web content.</p></div></a><a class="card project-card" href="Freelance/"><img alt="Freelance Design preview" loading="lazy" src="Freelance3small.jpg"/><div class="card-body"><h3>Freelance Design</h3><p>Branding, illustration, animation, flyers, web and creative design projects.</p></div></a><a class="card project-card" href="Dingbro/"><img alt="Dingbro Ltd preview" loading="lazy" src="AgriBack2.jpg"/><div class="card-body"><h3>Dingbro Ltd</h3><p>Product flyers, offer sheets, internal campaigns and catalogue-style layouts.</p></div></a>
 </div>
 </section>
