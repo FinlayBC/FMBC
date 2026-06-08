@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Dingbro Ltd</title>
+<link href="../FMBC2.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet"/>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="../"><img alt="FMBC logo" src="../FMBC.jpg"/><span>FMBC</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle"><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav"><a href="../">Home</a><a href="../Optimal/">Optimal</a><a href="../ROX/">ROX</a><a href="../YourVoiceInverclyde/">Your Voice</a><a href="../Freelance/">Freelance</a><a aria-current="page" href="../Dingbro/">Dingbro</a><a download="FinlayCraigCV.pdf" href="../FinlayCraigCV.pdf">CV</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero compact">
+<div><p class="eyebrow">Automotive marketing</p><h1>Dingbro Ltd</h1><p class="lede">Marketing assistant work focused on product flyers, offer sheets, internal marketing and print-ready sales materials.</p></div>
+</section>
+<section class="section"><div class="section-header"><div><p class="eyebrow">Design gallery</p><h2>Selected materials</h2></div><p></p></div><div class="gallery">
+<figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../dingbro.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../InternalMarketing2.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Drivetec.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Vinyl Gloves Green.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../CV Plant and Agri Magazine - Front and Back Pages.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Holts Brake Cleaner Offer Sheet.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Diary.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Jtape Essentials Update.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../CV Plant and Agri Magazine - Pages 2 and 3.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../CV Plant and Agri Magazine - Pages 4 and 5.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../XCP High Perf Multi Spray Flyer.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Winter Lines De-Icer Offer Sheet.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../Yuasa Myths Busted Page 1.jpg"/></figure><figure class="gallery-item contain"><img alt="Dingbro design sample" loading="lazy" src="../CMFC00253 DEOS and Abranet.jpg"/></figure></div></section></main>
+<footer class="site-footer">
+<div class="footer-wrap">
+<strong>Finlay Craig</strong>
+<span><a href="mailto:finlaycraig96@googlemail.com">finlaycraig96@googlemail.com</a></span>
+<span>07898111358</span>
+<span><a href="https://www.linkedin.com/in/finlaycraig" rel="noopener noreferrer" target="_blank">LinkedIn</a></span>
+</div>
+</footer>
+<div aria-hidden="true" aria-label="Expanded image viewer" class="lightbox" id="imageLightbox" role="dialog">
+<button aria-label="Close expanded image" class="lightbox-close" type="button">×</button>
+<img alt="" src=""/>
+</div><script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = lightbox ? lightbox.querySelector('img') : null;
+  const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+  const expandableImages = document.querySelectorAll('.gallery img, .case-card > img, .cv-frame img, .about-panel img');
+
+  function openLightbox(image) {
+    if (!lightbox || !lightboxImage) return;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || 'Expanded portfolio image';
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (lightboxClose) lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImage.src = '';
+  }
+
+  expandableImages.forEach((image) => {
+    image.classList.add('expandable-image');
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', 'Open image larger');
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script></body>
+</html>
